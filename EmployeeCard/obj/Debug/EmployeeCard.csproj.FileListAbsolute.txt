@@ -3,3 +3,8 @@ D:\NeologixPortal\EmployeeCard\EmployeeCard\bin\Debug\EmployeeCard.pdb
 D:\NeologixPortal\EmployeeCard\EmployeeCard\obj\Debug\EmployeeCard.dll
 D:\NeologixPortal\EmployeeCard\EmployeeCard\obj\Debug\EmployeeCard.pdb
 D:\NeologixPortal\EmployeeCard\EmployeeCard\obj\Debug\EmployeeCard.csprojResolveAssemblyReference.cache
+D:\Training Code\NewRepo\NeologixPortal\EmployeeCard\bin\Debug\EmployeeCard.dll
+D:\Training Code\NewRepo\NeologixPortal\EmployeeCard\bin\Debug\EmployeeCard.pdb
+D:\Training Code\NewRepo\NeologixPortal\EmployeeCard\obj\Debug\EmployeeCard.csprojResolveAssemblyReference.cache
+D:\Training Code\NewRepo\NeologixPortal\EmployeeCard\obj\Debug\EmployeeCard.dll
+D:\Training Code\NewRepo\NeologixPortal\EmployeeCard\obj\Debug\EmployeeCard.pdb

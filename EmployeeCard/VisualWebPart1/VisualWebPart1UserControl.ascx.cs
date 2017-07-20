@@ -21,7 +21,7 @@ namespace EmployeeCard.VisualWebPart1
             string siteURL = SPContext.Current.Site.Url.ToString() + "/HR";
             using (SPSite site = new SPSite(siteURL))
             {
-                //using web
+                
                 using (SPWeb web = SPContext.Current.Web)
                 {
                     SPList PDlist = web.Lists["Personal Details"];
@@ -41,11 +41,11 @@ namespace EmployeeCard.VisualWebPart1
                         txt_officialemail.Text = Convert.ToString(item["OfficialEmail"]);
                         txt_personalemail.Text = Convert.ToString(item["PersonalEmail"]);
                         txt_mobno.Text = Convert.ToString(item["Mobile No"]);
-                      //  txt_permantaddr.Text = Convert.ToString(item["Permanent Address"]);
+                      
                         txt_permantaddr.Text = ScrubHtml(Convert.ToString(item["Permanent Address"]));
-                     // txt_permantaddr.Text = HttpUtility.HtmlDecode(Convert.ToString(item["Permanent Address"]));
+                     
                         txt_current.Text = ScrubHtml(Convert.ToString(item["Current Address"]));
-                     //   txt_current.Text = Convert.ToString(item["Current Address"]);
+                 
                         txt_emercontactno.Text = Convert.ToString(item["Emergency Contact No"]);
                         txt_residenceno.Text = Convert.ToString(item["Residence No"]);
                         txt_father.Text = Convert.ToString(item["Father's Name"]);
