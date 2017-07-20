@@ -310,6 +310,15 @@ namespace EmployeeCard.VisualWebPart1 {
         protected global::System.Web.UI.WebControls.Label lbl_maritalstatus;
         
         /// <summary>
+        /// rdbtn_single control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rdbtn_single;
+        
+        /// <summary>
         /// rdbtn_married control.
         /// </summary>
         /// <remarks>
@@ -317,15 +326,6 @@ namespace EmployeeCard.VisualWebPart1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton rdbtn_married;
-        
-        /// <summary>
-        /// rdbtn_unmarried control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdbtn_unmarried;
         
         /// <summary>
         /// lbl_marriage control.

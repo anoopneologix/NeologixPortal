@@ -15,15 +15,14 @@ namespace EmployeeCard.VisualWebPart1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (!IsPostBack)
+          if (!IsPostBack)
             {
-            string siteURL = SPContext.Current.Site.Url.ToString() + "/HR";
-            using (SPSite site = new SPSite(siteURL))
-            {
+              string siteURL = SPContext.Current.Site.Url.ToString() + "/HR";
+               using (SPSite site = new SPSite(siteURL))
+                 {
                 
-                using (SPWeb web = SPContext.Current.Web)
-                {
+                  using (SPWeb web = SPContext.Current.Web)
+                   {
                     SPList PDlist = web.Lists["Personal Details"];
                     SPQuery PDquery = new SPQuery();
                     PDquery.Query = string.Concat("<Where><Eq><FieldRef Name='Author' LookupId='True'/> <Value Type='Lookup'>", web.CurrentUser.ID.ToString(), "</Value></Eq></Where>");
@@ -50,15 +49,15 @@ namespace EmployeeCard.VisualWebPart1
                         txt_residenceno.Text = Convert.ToString(item["Residence No"]);
                         txt_father.Text = Convert.ToString(item["Father's Name"]);
                         txt_mothernam.Text = Convert.ToString(item["Mother's Name"]);
-                        if (string.Compare(Convert.ToString(item["Marital status"]), "Married") == 0)
+                        if (string.Compare(Convert.ToString(item["Marital status"]), "Single") == 0)
                         {
 
-                            rdbtn_married.Checked = true;
+                            rdbtn_single.Checked = true;
 
                         }
                         else
                         {
-                            rdbtn_unmarried.Checked = true;
+                            rdbtn_married.Checked = true;
                         }
 
                         dtc_marriageanniversary.SelectedDate = Convert.ToDateTime(item["Marriage Anniversary"]);
@@ -78,8 +77,6 @@ namespace EmployeeCard.VisualWebPart1
                         personalitygvbind(web);
 
                     }
-
-
 
                 }
             }
@@ -904,13 +901,13 @@ namespace EmployeeCard.VisualWebPart1
                         item["Residence No"] = txt_residenceno.Text;
                         item["Father's Name"] = txt_father.Text;
                         item["Mother's Name"] = txt_mothernam.Text;
-                        if (rdbtn_married.Checked == true)
+                        if (rdbtn_single.Checked == true)
                         {
-                            item["Marital status"] = "Married";
+                            item["Marital status"] = "Single";
                         }
                         else
                         {
-                            item["Marital status"] = "Unmarried";
+                            item["Marital status"] = "Married";
                         }
 
                         item["Marriage Anniversary"] = dtc_marriageanniversary.SelectedDate;

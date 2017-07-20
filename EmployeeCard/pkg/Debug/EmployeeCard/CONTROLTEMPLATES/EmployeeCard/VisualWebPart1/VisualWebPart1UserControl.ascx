@@ -8,6 +8,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VisualWebPart1UserControl.ascx.cs" Inherits="EmployeeCard.VisualWebPart1.VisualWebPart1UserControl" %>
 <div>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;
     <asp:Button ID="btn_Save" runat="server" Text="Save" OnClick="btn_Save_Click" style="margin-left: 162px" />
     <br />
     <br />
@@ -105,9 +106,9 @@
                 <br />
                 <asp:Label ID="lbl_maritalstatus" runat="server" Text="Marital Status"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:RadioButton ID="rdbtn_married" runat="server" Text="Married" GroupName="maritalstatus" />
+    <asp:RadioButton ID="rdbtn_single" runat="server" Text="Single" GroupName="maritalstatus" />
                 &nbsp;
-    <asp:RadioButton ID="rdbtn_unmarried" runat="server"  Text="Unmarried" GroupName="maritalstatus" />
+    <asp:RadioButton ID="rdbtn_married" runat="server"  Text="Married" GroupName="maritalstatus" />
                 <br />
                 <br />
                 <asp:Label ID="lbl_marriage" runat="server" Text="Marriage Anniversary"></asp:Label>
