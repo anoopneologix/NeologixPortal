@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="8261e594-15b8-4f45-9515-c7069e27a056" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="EmployeeCard.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="EmployeeCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9c4eb3fbf2b0fc9a" Namespace="EmployeeCard.VisualWebPart1" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\EmployeeCard\VisualWebPart1\VisualWebPart1UserControl.ascx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="EmployeeCard_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

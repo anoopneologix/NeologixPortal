@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8261e594-15b8-4f45-9515-c7069e27a056" solutionId="8261e594-15b8-4f45-9515-c7069e27a056" resetWebServer="false" sharePointProductVersion="15.0" name="EmployeeCard" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="7d7d799e-0ff5-4a3f-bb6c-e268e7ae049b" />
+  </features>
+</package>
