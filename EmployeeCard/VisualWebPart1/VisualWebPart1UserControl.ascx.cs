@@ -21,6 +21,7 @@ namespace EmployeeCard.VisualWebPart1
             string siteURL = SPContext.Current.Site.Url.ToString() + "/HR";
             using (SPSite site = new SPSite(siteURL))
             {
+                //using web
                 using (SPWeb web = SPContext.Current.Web)
                 {
                     SPList PDlist = web.Lists["Personal Details"];
