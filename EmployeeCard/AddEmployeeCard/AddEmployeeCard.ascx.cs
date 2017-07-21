@@ -2,6 +2,7 @@
 using System;
 using System.ComponentModel;
 using System.Data;
+using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 
 namespace EmployeeCard.AddEmployeeCard
@@ -24,62 +25,31 @@ namespace EmployeeCard.AddEmployeeCard
             InitializeControl();
         }
 
+      
+
    protected void Page_Load(object sender, EventArgs e)
         {
 
-            string siteURL = SPContext.Current.Site.Url.ToString() + "/HR";
-            using (SPSite site = new SPSite(siteURL))
-            {
+            //string siteURL = SPContext.Current.Site.Url.ToString() + "/HR";
+            //using (SPSite site = new SPSite(siteURL))
+            //{
 
-                using (SPWeb web = SPContext.Current.Web)
+            //    using (SPWeb web = SPContext.Current.Web)
 
                
          
-                    
-                    
-                    childgv(web);
-                   
+            //   }
 
+            
+                 if (!Page.IsPostBack)
+                   {
+                         SetInitialRow(); 
+                    }
+               
 
-
-
-
-            }
           }
 
-    private void childgv(SPWeb web)
-         {
-              SPList CDlist = web.Lists["Employee Child Details"];
-              SPQuery CDquery = new SPQuery();
-              CDquery.Query = string.Concat("<Where><Eq><FieldRef Name='Employee_x0020_Id' /> <Value Type='Text'>", txt_id.Text, "</Value></Eq></Where>");
-              //  SPListItemCollection cditems = CDlist.Items;
-
-              SPListItemCollection newcditems = CDlist.GetItems(CDquery);
-              DataSet ds = new DataSet();
-              DataTable dt = new DataTable();
-              dt.Columns.Add("ID");
-              dt.Columns.Add("Child Name");
-              dt.Columns.Add("Child Age");
-
-              foreach (SPListItem item in newcditems)
-              {
-                  DataRow dr = dt.NewRow();
-
-                  dr[0] = item["ID"].ToString();
-                  dr[1] = item["Child Name"].ToString();
-                  dr[2] = item["Child Age"].ToString();
-
-
-                  dt.Rows.Add(dr);
-              }
-
-              ds.Tables.Add(dt);
-              gv_child.DataSource = ds;
-              gv_child.DataBind();
-          }
-
-     
-      
+            
         protected void btn_Save_Click(object sender, EventArgs e)
         {
 
@@ -151,9 +121,87 @@ namespace EmployeeCard.AddEmployeeCard
             txt_spousedesignation.Text = string.Empty; ;
             txt_spousedesignation.Text = string.Empty; 
         }
-           
-    
-    }
+
+        private void SetInitialRow()
+        {
+            DataTable dtSource = new DataTable();
+            DataRow dr = null;
+            dtSource.Columns.Add("ID");
+            dtSource.Columns.Add("Child Name");
+            dtSource.Columns.Add("Child Age");
+
+            dtSource.Rows.Add(dr);
+
+            ViewState["dtSource"] = dtSource;
+
+            gv_child.DataSource = dtSource;
+            gv_child.DataBind();
+
+        }
+
+        protected void btn_add_Click(object sender, EventArgs e)
+        {
+            DataTable dtSource = ViewState["dtSource"] as DataTable;
+
+            DataRow dr = dtSource.NewRow();
+
+            dr["ID"] = txt_id.Text;
+            dr["Child Name"] = txt_chdname.Text;
+            dr["Child Age"] = txt_chdage.Text;
+            dtSource.Rows.Add(dr);
+            gv_child.DataSource = dtSource;
+            gv_child.DataBind();
+
+            clear();
+
+        }
+
+        private void clear()
+        {
+            txt_chdname.Text = "";
+            txt_chdage.Text = "";
+
+        }
+
+
+        protected void gv_child_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void gv_child_RowCancelingEdit(object sender, System.Web.UI.WebControls.GridViewCancelEditEventArgs e)
+        {
+
+            SPWeb web = SPContext.Current.Web;
+            gv_child.EditIndex = -1;
+            SetInitialRow();
+        }
+
+        protected void gv_child_RowDeleting(object sender, System.Web.UI.WebControls.GridViewDeleteEventArgs e)
+        {
+            //GridViewRow row = (GridViewRow)gv_child.Rows[e.RowIndex];
+            //int Child = row.DataItemIndex;
+            ////int index = Convert.ToInt32(e.RowIndex);
+            //DataTable dtSource = ViewState["dtSource"] as DataTable;
+            //DataRow dr = dtSource.NewRow();
+
+            //dtSource.Rows[Child].Delete();
+            //ViewState["dtSource"] = dtSource;
+            //SetInitialRow();
+            
+        }
+
+        protected void gv_child_RowEditing(object sender, System.Web.UI.WebControls.GridViewEditEventArgs e)
+        {
+
+        }
+
+        protected void gv_child_RowUpdating(object sender, System.Web.UI.WebControls.GridViewUpdateEventArgs e)
+        {
+
+        }
+
+   }
        
 }
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="0c773802-6e31-413b-ad73-26a7cda16632" Scope="Site" Title="EmployeeCard Feature1">
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="EmployeeCard Feature1" Id="0c773802-6e31-413b-ad73-26a7cda16632" Scope="Site">
   <ElementManifests>
     <ElementManifest Location="VisualWebPart1\Elements.xml" />
     <ElementFile Location="VisualWebPart1\VisualWebPart1.webpart" />
