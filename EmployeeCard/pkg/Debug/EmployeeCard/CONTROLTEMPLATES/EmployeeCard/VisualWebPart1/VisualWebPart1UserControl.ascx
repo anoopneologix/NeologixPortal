@@ -182,7 +182,7 @@
     <br />
     <br />
     <br />
-    &nbsp;<asp:GridView ID="gv_education" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="976px" AutoGenerateColumns="False" OnRowCancelingEdit="gv_education_RowCancelingEdit" OnRowDeleting="gv_education_RowDeleting" OnRowEditing="gv_education_RowEditing" OnRowUpdating="gv_education_RowUpdating" DataKeyNames="ID">
+    &nbsp;<asp:GridView ID="gv_education" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="976px" AutoGenerateColumns="False" OnRowCancelingEdit="gv_education_RowCancelingEdit" OnRowDeleting="gv_education_RowDeleting" OnRowEditing="gv_education_RowEditing" OnRowUpdating="gv_education_RowUpdating" DataKeyNames="ID" OnSelectedIndexChanged="gv_education_SelectedIndexChanged">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />

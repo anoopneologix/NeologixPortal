@@ -103,7 +103,7 @@ namespace EmployeeCard.VisualWebPart1
             dt.Columns.Add("Child Name");
             dt.Columns.Add("Child Age");
 
-            foreach (SPListItem item in newcditems)
+            foreach(SPListItem item in newcditems)
             {
                 DataRow dr = dt.NewRow();
 
@@ -111,8 +111,7 @@ namespace EmployeeCard.VisualWebPart1
                 dr[1] = item["Child Name"].ToString();
                 dr[2] = item["Child Age"].ToString();
 
-
-                dt.Rows.Add(dr);
+                 dt.Rows.Add(dr);
             }
 
             ds.Tables.Add(dt);
@@ -919,6 +918,11 @@ namespace EmployeeCard.VisualWebPart1
 
                     }
              }
+
+        protected void gv_education_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
 
        
        }

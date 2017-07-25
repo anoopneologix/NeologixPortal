@@ -26,6 +26,7 @@ namespace EmployeeCard.AddEmployeeCard
         }
 
       
+      
 
    protected void Page_Load(object sender, EventArgs e)
         {
@@ -43,13 +44,18 @@ namespace EmployeeCard.AddEmployeeCard
             
                  if (!Page.IsPostBack)
                    {
-                         SetInitialRow(); 
+                         SetInitialRow();
+                         EducationGv();
+                         CertificationGv();
+                         CareerGv();
+                         NeoGv();
+                         StrenGv();
                     }
                
 
           }
 
-            
+     
         protected void btn_Save_Click(object sender, EventArgs e)
         {
 
@@ -92,16 +98,26 @@ namespace EmployeeCard.AddEmployeeCard
             item.Update();
 
 
-                }
+            SPList CDlist = web.Lists["Employee Child Details"];
+            SPListItemCollection newcditems = CDlist.Items;
+            SPListItem item2 = CDlist.Items.Add();
+
+            //for (int i = 0; i < gv_child ; i++)
+            //{
+            //    item2["Employee Id"] = txt_id.Text;
+            //    item2["Child Name"] = gv_child[i][0];
+
+            //}
+          }
 
         protected void btn_cancel_Click(object sender, EventArgs e)
         {
             txt_id.Text = string.Empty;
             txt_name.Text = string.Empty;
 
-            //   dp_doj.SelectedDate = dp_doj.
+            //  dp_doj.SelectedDate = dp_doj.
             txt_blood.Text = string.Empty;
-            //     dtcDoB.SelectedDate = string.Empty;
+            // dtcDoB.SelectedDate = string.Empty;
             txt_pancard.Text = string.Empty;
             txt_officialemail.Text = string.Empty;
             txt_personalemail.Text = string.Empty;
@@ -124,36 +140,45 @@ namespace EmployeeCard.AddEmployeeCard
 
         private void SetInitialRow()
         {
-            DataTable dtSource = new DataTable();
-            DataRow dr = null;
-            dtSource.Columns.Add("ID");
-            dtSource.Columns.Add("Child Name");
-            dtSource.Columns.Add("Child Age");
 
-            dtSource.Rows.Add(dr);
+            SPWeb web = SPContext.Current.Web;
+            SPList CDlist = web.Lists["Employee Child Details"];
 
-            ViewState["dtSource"] = dtSource;
+            DataTable dtSource1 = new DataTable();
+         
+           // DataRow dr = dtSource.NewRow();
+           //   DataRow dr =null;
+            dtSource1.Columns.Add("ID");
+            dtSource1.Columns.Add("Child Name");
+            dtSource1.Columns.Add("Child Age");
 
-            gv_child.DataSource = dtSource;
+           //   dtSource.Rows.Add(dr);
+
+            ViewState["dtSource1"] = dtSource1;
+
+            gv_child.DataSource = dtSource1;
             gv_child.DataBind();
 
         }
 
         protected void btn_add_Click(object sender, EventArgs e)
         {
-            DataTable dtSource = ViewState["dtSource"] as DataTable;
 
-            DataRow dr = dtSource.NewRow();
+            DataTable dtSource1 = ViewState["dtSource1"] as DataTable;
+            DataRow dr = dtSource1.NewRow();
 
             dr["ID"] = txt_id.Text;
             dr["Child Name"] = txt_chdname.Text;
             dr["Child Age"] = txt_chdage.Text;
-            dtSource.Rows.Add(dr);
-            gv_child.DataSource = dtSource;
-            gv_child.DataBind();
+            dtSource1.Rows.Add(dr);
 
-            clear();
 
+             gv_child.DataSource =  dtSource1;
+             
+             gv_child.DataBind();
+
+             clear();
+        
         }
 
         private void clear()
@@ -166,43 +191,605 @@ namespace EmployeeCard.AddEmployeeCard
 
         protected void gv_child_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+          
         }
 
         protected void gv_child_RowCancelingEdit(object sender, System.Web.UI.WebControls.GridViewCancelEditEventArgs e)
         {
 
             SPWeb web = SPContext.Current.Web;
+            DataTable dtSource1 = ViewState["dtSource1"] as DataTable;
             gv_child.EditIndex = -1;
-            SetInitialRow();
+            gv_child.DataSource = dtSource1;
+            gv_child.DataBind();
         }
 
         protected void gv_child_RowDeleting(object sender, System.Web.UI.WebControls.GridViewDeleteEventArgs e)
         {
+
             //GridViewRow row = (GridViewRow)gv_child.Rows[e.RowIndex];
             //int Child = row.DataItemIndex;
-            ////int index = Convert.ToInt32(e.RowIndex);
-            //DataTable dtSource = ViewState["dtSource"] as DataTable;
-            //DataRow dr = dtSource.NewRow();
-
-            //dtSource.Rows[Child].Delete();
-            //ViewState["dtSource"] = dtSource;
-            //SetInitialRow();
-            
+            int Child = Convert.ToInt32(e.RowIndex);
+             DataTable dtSource1 = ViewState["dtSource1"] as DataTable;
+            DataRow dr = dtSource1.NewRow();
+            dtSource1.Rows[Child].Delete();
+           // ViewState["dtSource"] = dtSource;
+           // SetInitialRow();
+            gv_child.DataSource = dtSource1;
+            gv_child.DataBind();
         }
 
         protected void gv_child_RowEditing(object sender, System.Web.UI.WebControls.GridViewEditEventArgs e)
         {
+            SPWeb web = SPContext.Current.Web;
+            DataTable dtSource1 = ViewState["dtSource1"] as DataTable;
+            gv_child.EditIndex = e.NewEditIndex;
+            gv_child.DataSource = dtSource1;
+            gv_child.DataBind();
 
         }
 
         protected void gv_child_RowUpdating(object sender, System.Web.UI.WebControls.GridViewUpdateEventArgs e)
         {
 
+          
+
+            GridViewRow row = gv_child.Rows[e.RowIndex];
+            
+            int childindex = row.DataItemIndex;
+
+          
+
+            string name = (row.Cells[1].Controls[0] as TextBox).Text;
+            string age = (row.Cells[2].Controls[0] as TextBox).Text;
+            DataTable dtSource1 = ViewState["dtSource1"] as DataTable;
+            dtSource1.Rows[row.RowIndex]["Child Name"] = name;
+            dtSource1.Rows[row.RowIndex]["Child Age"] = age;
+         //   ViewState["dtSource"] = dtSource;
+            gv_child.EditIndex = -1;
+            gv_child.DataSource = dtSource1;
+            gv_child.DataBind();
+
         }
 
-   }
+
+
+        private void EducationGv()
+        {
+            DataTable dtSource2 = new DataTable();
+
+
+            dtSource2.Columns.Add("ID");
+            dtSource2.Columns.Add("Qualification");
+            dtSource2.Columns.Add("School/College");
+            dtSource2.Columns.Add("University");
+            dtSource2.Columns.Add("Year Of Passing");
+            dtSource2.Columns.Add("Marks");
+
+            ViewState["dtSource2"] = dtSource2;
+
+            gv_education.DataSource = dtSource2;
+            gv_education.DataBind();
+        }
+        protected void btn_addedu_Click1(object sender, EventArgs e)
+        {
+
+
+            DataTable dtSource2 = ViewState["dtSource2"] as DataTable;
+
+            DataRow dr = dtSource2.NewRow();
+
+
+            dr["ID"] = txt_id.Text;
+            dr["Qualification"] = txt_quali.Text;
+            dr["School/College"] = txt_school.Text;
+            dr["University"] = txt_uni.Text;
+            dr["Year Of Passing"] = txt_yop.Text;
+            dr["Marks"] = txt_marks.Text;
+            dtSource2.Rows.Add(dr);
+            gv_education.DataSource = dtSource2;
+            gv_education.DataBind();
+
+            clearedu();
+        }
+
+        private void clearedu()
+        {
+            txt_quali.Text = "";
+            txt_school.Text = "";
+            txt_uni.Text = "";
+            txt_yop.Text = "";
+            txt_marks.Text = "";
+
+        }
+
+
+        protected void gv_education_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            SPWeb web = SPContext.Current.Web;
+            DataTable dtSource2 = ViewState["dtSource2"] as DataTable;
+            gv_education.EditIndex = -1;
+            gv_education.DataSource = dtSource2;
+            gv_education.DataBind();
+        }
+
+        protected void gv_education_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int Qualif = Convert.ToInt32(e.RowIndex);
+            DataTable dtSource2 = ViewState["dtSource2"] as DataTable;
+            DataRow dr = dtSource2.NewRow();
+            dtSource2.Rows[Qualif].Delete();
+            // ViewState["dtSource"] = dtSource;
+            // SetInitialRow();
+            gv_education.DataSource = dtSource2;
+            gv_education.DataBind();
+
+
+        }
+
+       protected void gv_education_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            SPWeb web = SPContext.Current.Web;
+            DataTable dtSource2 = ViewState["dtSource2"] as DataTable;
+            gv_education.EditIndex = e.NewEditIndex;
+            gv_education.DataSource = dtSource2;
+            gv_education.DataBind();
+
+        }
+
+        protected void gv_education_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            GridViewRow row = gv_education.Rows[e.RowIndex];
+          
+            string quali = (row.Cells[1].Controls[0] as TextBox).Text;
+            string sch = (row.Cells[2].Controls[0] as TextBox).Text;
+            string univ = (row.Cells[3].Controls[0] as TextBox).Text;
+            string yop = (row.Cells[4].Controls[0] as TextBox).Text;
+            string marks = (row.Cells[5].Controls[0] as TextBox).Text;
+                    
+            DataTable dtSource2 = ViewState["dtSource2"] as DataTable;
+            dtSource2.Rows[row.RowIndex]["Qualification"] = quali;
+            dtSource2.Rows[row.RowIndex]["School/College"] = sch;
+            dtSource2.Rows[row.RowIndex]["University"] = univ;
+            dtSource2.Rows[row.RowIndex]["Year Of Passing"] = yop;
+            dtSource2.Rows[row.RowIndex]["Marks"] = marks;
+        
        
+            gv_education.EditIndex = -1;
+            gv_education.DataSource = dtSource2;
+            gv_education.DataBind();
+        }
+
+        
+
+       
+
+        protected void gv_child_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+          
+        }
+       
+
+
+     private void CertificationGv()
+        {
+            DataTable dtSource3 = new DataTable();
+
+       
+            dtSource3.Columns.Add("ID");
+            dtSource3.Columns.Add("Name");
+            dtSource3.Columns.Add("Validity From");
+            dtSource3.Columns.Add("Validity To");
+          
+
+            ViewState["dtSource3"] = dtSource3;
+
+            gv_certifications.DataSource = dtSource3;
+            gv_certifications.DataBind();
+        }
+
+        protected void gv_certifications_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            SPWeb web = SPContext.Current.Web;
+            DataTable dtSource3 = ViewState["dtSource3"] as DataTable;
+            gv_certifications.EditIndex = -1;
+            gv_certifications.DataSource = dtSource3;
+            gv_certifications.DataBind();
+        }
+
+        protected void gv_certifications_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int Certif = Convert.ToInt32(e.RowIndex);
+            DataTable dtSource3 = ViewState["dtSource3"] as DataTable;
+            DataRow dr = dtSource3.NewRow();
+            dtSource3.Rows[Certif].Delete();
+            // ViewState["dtSource"] = dtSource;
+            // SetInitialRow();
+            gv_certifications.DataSource = dtSource3;
+            gv_certifications.DataBind();
+        }
+
+        protected void gv_certifications_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            SPWeb web = SPContext.Current.Web;
+            DataTable dtSource3 = ViewState["dtSource3"] as DataTable;
+            gv_certifications.EditIndex = e.NewEditIndex;
+            gv_certifications.DataSource = dtSource3;
+            gv_certifications.DataBind();
+        }
+
+        protected void gv_certifications_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            GridViewRow row = gv_certifications.Rows[e.RowIndex];
+
+            string name = (row.Cells[1].Controls[0] as TextBox).Text;
+            string from = (row.Cells[2].Controls[0] as TextBox).Text;
+            string to= (row.Cells[3].Controls[0] as TextBox).Text;
+           
+
+            DataTable dtSource3 = ViewState["dtSource3"] as DataTable;
+            dtSource3.Rows[row.RowIndex]["Name"] = name;
+            dtSource3.Rows[row.RowIndex]["Validity From"] = from;
+            dtSource3.Rows[row.RowIndex]["Validity To"] = to;
+          
+
+
+            gv_certifications.EditIndex = -1;
+            gv_certifications.DataSource = dtSource3;
+            gv_certifications.DataBind();
+        }
+
+
+
+         protected void btn_certadd_Click1(object sender, EventArgs e)
+        {
+            DataTable dtSource3 = ViewState["dtSource3"] as DataTable;
+
+            DataRow dr = dtSource3.NewRow();
+           
+         
+            dr["ID"] = txt_id.Text;
+            dr["Name"] = txt_certname.Text;
+            dr["Validity From"] = txt_valfrom.Text;
+            dr["Validity To"] = txt_valto.Text;
+            
+            dtSource3.Rows.Add(dr);
+            gv_certifications.DataSource = dtSource3;
+            gv_certifications.DataBind();
+
+            clearcert();
+        }
+
+        private void clearcert()
+        {
+            txt_certname.Text = "";
+            txt_valfrom.Text = "";
+            txt_valto.Text = "";
+            
+
+        }
+
+
+
+        private void CareerGv()
+        {
+            DataTable dtSource4 = new DataTable();
+
+
+            dtSource4.Columns.Add("ID");
+            dtSource4.Columns.Add("Designation");
+            dtSource4.Columns.Add("Company");
+            dtSource4.Columns.Add("Tenure From");
+            dtSource4.Columns.Add("Tenure To");
+            dtSource4.Columns.Add("Technical Skill");
+            dtSource4.Columns.Add("Final salary");
+       
+
+
+            ViewState["dtSource4"] = dtSource4;
+
+            gv_careers.DataSource = dtSource4;
+            gv_careers.DataBind();
+        }
+
+        protected void gv_careers_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            SPWeb web = SPContext.Current.Web;
+            DataTable dtSource4 = ViewState["dtSource4"] as DataTable;
+            gv_careers.EditIndex = -1;
+            gv_careers.DataSource = dtSource4;
+            gv_careers.DataBind();
+        }
+
+        protected void gv_careers_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int Careers = Convert.ToInt32(e.RowIndex);
+            DataTable dtSource4 = ViewState["dtSource4"] as DataTable;
+            DataRow dr = dtSource4.NewRow();
+            dtSource4.Rows[Careers].Delete();
+            gv_careers.DataSource = dtSource4;
+            gv_careers.DataBind();
+        }
+
+        protected void gv_careers_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            SPWeb web = SPContext.Current.Web;
+            DataTable dtSource4 = ViewState["dtSource4"] as DataTable;
+            gv_careers.EditIndex = e.NewEditIndex;
+            gv_careers.DataSource = dtSource4;
+            gv_careers.DataBind();
+        }
+
+        protected void gv_careers_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            GridViewRow row = gv_careers.Rows[e.RowIndex];
+
+            string desg = (row.Cells[1].Controls[0] as TextBox).Text;
+            string comp = (row.Cells[2].Controls[0] as TextBox).Text;
+            string from = (row.Cells[3].Controls[0] as TextBox).Text;
+            string to = (row.Cells[4].Controls[0] as TextBox).Text;
+            string skill = (row.Cells[5].Controls[0] as TextBox).Text;
+            string sal = (row.Cells[6].Controls[0] as TextBox).Text;
+
+
+            DataTable dtSource4 = ViewState["dtSource4"] as DataTable;
+            dtSource4.Rows[row.RowIndex]["Designation"] = desg;
+            dtSource4.Rows[row.RowIndex]["Company"] = comp;
+            dtSource4.Rows[row.RowIndex]["Tenure From"] = from;
+            dtSource4.Rows[row.RowIndex]["Tenure To"] = to;
+            dtSource4.Rows[row.RowIndex]["Technical Skill"] = skill;
+            dtSource4.Rows[row.RowIndex]["Final salary"] =sal;
+         
+
+            gv_careers.EditIndex = -1;
+            gv_careers.DataSource = dtSource4;
+            gv_careers.DataBind();
+        }
+
+        protected void btn_careeradd_Click(object sender, EventArgs e)
+        {
+            DataTable dtSource4 = ViewState["dtSource4"] as DataTable;
+
+            DataRow dr = dtSource4.NewRow();
+           
+
+            dr["ID"] = txt_id.Text;
+            dr["Designation"] = txt_desg.Text;
+            dr["Company"] = txt_comp.Text;
+            dr["Tenure From"] = txt_tenurefrom.Text;
+            dr["Tenure To"] = txt_tenureto.Text;
+            dr["Technical Skill"] = txt_skill.Text;
+            dr["Final salary"] = txt_sal.Text;
+
+            dtSource4.Rows.Add(dr);
+            gv_careers.DataSource = dtSource4;
+            gv_careers.DataBind();
+
+            clearcareers();
+        }
+
+        private void clearcareers()
+        {
+            txt_desg.Text = "";
+            txt_comp.Text = "";
+            txt_tenurefrom.Text = "";
+            txt_tenureto.Text = "";
+            txt_skill.Text = "";
+            txt_sal.Text = "";
+        }
+
+        private void NeoGv()
+        {
+            DataTable dtSource5 = new DataTable();
+
+
+            dtSource5.Columns.Add("ID");
+            dtSource5.Columns.Add("Designation");
+            dtSource5.Columns.Add("From");
+            dtSource5.Columns.Add("To");
+            dtSource5.Columns.Add("Reporting Officer");
+       
+
+           
+
+            ViewState["dtSource5"] = dtSource5;
+
+            gv_neoexp.DataSource = dtSource5;
+            gv_neoexp.DataBind();
+        }
+
+        protected void gv_neoexp_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            SPWeb web = SPContext.Current.Web;
+            DataTable dtSource5 = ViewState["dtSource5"] as DataTable;
+            gv_neoexp.EditIndex = -1;
+            gv_neoexp.DataSource = dtSource5;
+            gv_neoexp.DataBind();
+        }
+
+        protected void gv_neoexp_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int Neo = Convert.ToInt32(e.RowIndex);
+            DataTable dtSource5 = ViewState["dtSource5"] as DataTable;
+            DataRow dr = dtSource5.NewRow();
+            dtSource5.Rows[Neo].Delete();
+            gv_neoexp.DataSource = dtSource5;
+            gv_neoexp.DataBind();
+        }
+
+        protected void gv_neoexp_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            SPWeb web = SPContext.Current.Web;
+            DataTable dtSource5 = ViewState["dtSource5"] as DataTable;
+            gv_neoexp.EditIndex = e.NewEditIndex;
+            gv_neoexp.DataSource = dtSource5;
+            gv_neoexp.DataBind();
+        }
+
+        protected void gv_neoexp_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            GridViewRow row = gv_neoexp.Rows[e.RowIndex];
+
+            string desg = (row.Cells[1].Controls[0] as TextBox).Text;
+            string from = (row.Cells[2].Controls[0] as TextBox).Text;
+            string to = (row.Cells[3].Controls[0] as TextBox).Text;
+            string ro = (row.Cells[4].Controls[0] as TextBox).Text;
+        
+
+
+            DataTable dtSource5 = ViewState["dtSource5"] as DataTable;
+            dtSource5.Rows[row.RowIndex]["Designation"] = desg;
+            dtSource5.Rows[row.RowIndex]["From"] = from;
+            dtSource5.Rows[row.RowIndex]["To"] = to;
+            dtSource5.Rows[row.RowIndex]["Reporting Officer"] = ro;
+
+
+
+            gv_neoexp.EditIndex = -1;
+            gv_neoexp.DataSource = dtSource5;
+            gv_neoexp.DataBind();
+        }
+
+        protected void btn_neoadd_Click1(object sender, EventArgs e)
+        {
+            DataTable dtSource5 = ViewState["dtSource5"] as DataTable;
+
+            DataRow dr = dtSource5.NewRow();
+
+
+            dr["ID"] = txt_id.Text;
+            dr["Designation"] = txt_neodesg.Text;
+            dr["From"] = txt_neofrom.Text;
+            dr["To"] = txt_neoto.Text;
+            dr["Reporting Officer"] = txt_neoRo.Text;
+          
+
+            dtSource5.Rows.Add(dr);
+            gv_neoexp.DataSource = dtSource5;
+            gv_neoexp.DataBind();
+
+            clearneo();
+        }
+
+        private void clearneo()
+        {
+            txt_neodesg.Text = "";
+            txt_neofrom.Text = "";
+            txt_neoto.Text = "";
+            txt_neoRo.Text = "";
+        }
+
+
+
+        private void StrenGv()
+        {
+            DataTable dtSource = new DataTable();
+
+
+            dtSource.Columns.Add("ID");
+            dtSource.Columns.Add("Strength");
+            dtSource.Columns.Add("Weakness");
+          
+
+
+            ViewState["dtSource"] = dtSource;
+
+            gv_strength.DataSource = dtSource;
+            gv_strength.DataBind();
+        }
+
+   
+ 
+
+ 
+   
+  
+
+        protected void gv_strength_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            SPWeb web = SPContext.Current.Web;
+            DataTable dtSource = ViewState["dtSource"] as DataTable;
+            gv_strength.EditIndex = -1;
+            gv_strength.DataSource = dtSource;
+            gv_strength.DataBind();
+        }
+
+        protected void gv_strength_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int Stren= Convert.ToInt32(e.RowIndex);
+            DataTable dtSource = ViewState["dtSource"] as DataTable;
+            DataRow dr = dtSource.NewRow();
+            dtSource.Rows[Stren].Delete();
+            gv_strength.DataSource = dtSource;
+            gv_strength.DataBind();
+        }
+
+        protected void gv_strength_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            SPWeb web = SPContext.Current.Web;
+            DataTable dtSource = ViewState["dtSource"] as DataTable;
+            gv_strength.EditIndex = e.NewEditIndex;
+            gv_strength.DataSource = dtSource;
+            gv_strength.DataBind();
+        }
+
+        protected void gv_strength_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            GridViewRow row = gv_strength.Rows[e.RowIndex];
+
+            string stren= (row.Cells[1].Controls[0] as TextBox).Text;
+            string weak = (row.Cells[2].Controls[0] as TextBox).Text;
+            
+
+
+
+            DataTable dtSource = ViewState["dtSource"] as DataTable;
+            dtSource.Rows[row.RowIndex]["Strength"] = stren;
+            dtSource.Rows[row.RowIndex]["Weakness"] = weak;
+          
+
+
+            gv_strength.EditIndex = -1;
+            gv_strength.DataSource = dtSource;
+            gv_strength.DataBind();
+        }
+
+
+
+
+        protected void btn_stenadd_Click(object sender, EventArgs e)
+        {
+            DataTable dtSource = ViewState["dtSource"] as DataTable;
+
+            DataRow dr = dtSource.NewRow();
+
+
+            dr["ID"] = txt_id.Text;
+            dr["Strength"] = txt_stren.Text;
+            dr["Weakness"] = txt_weak.Text;
+          
+
+         
+            dtSource.Rows.Add(dr);
+            gv_strength.DataSource = dtSource;
+            gv_strength.DataBind();
+
+            clearstren();
+        }
+
+        private void clearstren()
+        {
+            txt_stren.Text = "";
+            txt_weak.Text = "";
+        }
+
+    
+
+      
+       
+       
+
+    }
 }
 
 
