@@ -58,7 +58,24 @@ namespace EmployeeCard.AddEmployeeCard
      
         protected void btn_Save_Click(object sender, EventArgs e)
         {
+       
+         
 
+
+            SavePersonalDetails();
+            SaveChildDetails();
+            SaveEducationQualif();
+            SaveCertifications();
+            SaveCareers();
+            SaveNeoExp();
+            SavePersonality();
+
+
+
+       }
+
+        private void SavePersonalDetails()
+        {
             SPWeb web = SPContext.Current.Web;
             SPList PDlist = web.Lists["Personal Details"];
             SPQuery PDquery = new SPQuery();
@@ -66,6 +83,7 @@ namespace EmployeeCard.AddEmployeeCard
             //SPListItemCollection items = PDlist.Items;
             SPListItemCollection newitems = PDlist.GetItems(PDquery);
             SPListItem item = PDlist.Items.Add();
+
             item["Employee Id"] = txt_id.Text;
             item["Name"] = txt_name.Text;
             item["DOJ"] = dp_doj.SelectedDate;
@@ -98,17 +116,162 @@ namespace EmployeeCard.AddEmployeeCard
             item.Update();
 
 
+        }
+
+        private void SavePersonality()
+        {
+            SPWeb web = SPContext.Current.Web;
+            SPList SWlist = web.Lists["Strengths And Weakness"];
+            SPListItemCollection switems = SWlist.Items;
+            SPListItem item7 = SWlist.Items.Add();
+            for (int i = 0; i < gv_strength.Rows.Count; i++)
+            {
+                item7["Employee Id"] = txt_id.Text;
+                GridViewRow row = gv_strength.Rows[i];
+                item7["Strength"] = row.Cells[1].Text;
+                item7["Weakness"] = row.Cells[2].Text;
+
+            }
+
+            item7.Update();
+
+        }
+
+        private void SaveNeoExp()
+        {
+            SPWeb web = SPContext.Current.Web;
+            SPList NEOlist = web.Lists["Neo Experience"];
+            SPListItemCollection neoitems = NEOlist.Items;
+            SPListItem item6 = NEOlist.Items.Add();
+            for (int i = 0; i < gv_neoexp.Rows.Count; i++)
+            {
+                item6["Employee Id"] = txt_id.Text;
+                GridViewRow row = gv_neoexp.Rows[i];
+                item6["Designation"] = row.Cells[1].Text;
+              //  item6["From"] = row.Cells[2].Text;
+
+                DateTime valFrom = Convert.ToDateTime(row.Cells[2].Text);
+                //item4["Validity From"] = valFrom.ToShortDateString();
+                item6["From"] = valFrom.Date;
+
+
+               // item6["To"] = row.Cells[3].Text;
+                DateTime valFrom2 = Convert.ToDateTime(row.Cells[3].Text);
+               
+                item6["To"] = valFrom2.Date;
+                item6["Reporting Officer"] = row.Cells[4].Text;
+
+            }
+
+            item6.Update();
+        }
+
+        private void SaveCareers()
+        {
+            SPWeb web = SPContext.Current.Web;
+            SPList CRlist = web.Lists["Careers"];
+            SPListItemCollection critems = CRlist.Items;
+            SPListItem item5 = CRlist.Items.Add();
+            for (int i = 0; i < gv_careers.Rows.Count; i++)
+            {
+                item5["Employee Id"] = txt_id.Text;
+                GridViewRow row = gv_careers.Rows[i];
+                item5["Designation"] = row.Cells[1].Text;
+                item5["Company"] = row.Cells[2].Text;
+                //DateTime valFrom = Convert.ToDateTime(row.Cells[3].ToString());
+                //item5["Tenure From"] = valFrom.ToShortDateString();
+
+                DateTime valFrom = Convert.ToDateTime(row.Cells[3].Text);
+                //item4["Validity From"] = valFrom.ToShortDateString();
+                item5["Tenure From"] = valFrom.Date;
+                
+                //item5["Tenure From"] = row.Cells[3].Text;
+
+              //   DateTime valFrom2 = Convert.ToDateTime(row.Cells[4].ToString());
+                   
+                  DateTime valFrom2 = Convert.ToDateTime(row.Cells[4].Text);
+                // item5["Tenure To"] = valFrom2.ToShortDateString();
+                item5["Tenure To"] = valFrom2.Date;
+                //item5["Tenure To"] = row.Cells[4].Text;
+                item5["Technical Skill"] = row.Cells[5].Text;
+                item5["Final salary"] = row.Cells[6].Text;
+
+             }
+            item5.Update();
+         }
+
+        private void SaveCertifications()
+        {
+            SPWeb web = SPContext.Current.Web;
+            SPList CTlist = web.Lists["Certifications"];
+            SPListItemCollection ctitems = CTlist.Items;
+            SPListItem item4 = CTlist.Items.Add();
+            for (int i = 0; i < gv_certifications.Rows.Count; i++)
+            {
+                item4["Employee Id"] = txt_id.Text;
+                GridViewRow row = gv_certifications.Rows[i];
+                item4["Name"] = row.Cells[1].Text;
+
+           
+                //DateTime valFrom = Convert.ToDateTime(row.Cells[2].ToString());
+                
+                DateTime valFrom = Convert.ToDateTime(row.Cells[2].Text);
+                //item4["Validity From"] = valFrom.ToShortDateString();
+                item4["Validity From"] = valFrom.Date;
+                
+
+               //  item4["Validity From"] = row.Cells[2].Text;
+
+               // DateTime valFrom2 = Convert.ToDateTime(row.Cells[3].ToString());
+
+                DateTime valFrom2 = Convert.ToDateTime(row.Cells[3].Text);
+               //item4["Validity To"] = valFrom2.ToShortDateString();
+                item4["Validity To"] = valFrom2.Date;
+              //item4["Validity To"] = row.Cells[3].Text;
+               
+            }
+            item4.Update();
+        }
+
+        private void SaveEducationQualif()
+        {
+            SPWeb web = SPContext.Current.Web;
+            SPList EQlist = web.Lists["Educational Qualifications"];
+            SPListItemCollection eqitems = EQlist.Items;
+            SPListItem item3 = EQlist.Items.Add();
+
+            for (int i = 0; i < gv_education.Rows.Count; i++)
+            {
+                item3["Employee Id"] = txt_id.Text;
+                GridViewRow row = gv_education.Rows[i];
+                item3["Qualification"] = row.Cells[1].Text;
+                item3["School/College"] = row.Cells[2].Text;
+                item3["University"] = row.Cells[3].Text;
+                item3["Year Of Passing"] = row.Cells[4].Text;
+                item3["Marks"] = row.Cells[5].Text;
+
+            }
+            item3.Update();
+        }
+
+        private void SaveChildDetails()
+        {
+            SPWeb web = SPContext.Current.Web;
             SPList CDlist = web.Lists["Employee Child Details"];
             SPListItemCollection newcditems = CDlist.Items;
             SPListItem item2 = CDlist.Items.Add();
 
-            //for (int i = 0; i < gv_child ; i++)
-            //{
-            //    item2["Employee Id"] = txt_id.Text;
-            //    item2["Child Name"] = gv_child[i][0];
 
-            //}
-          }
+            for (int i = 0; i < gv_child.Rows.Count; i++)
+            {
+                item2["Employee Id"] = txt_id.Text;
+                GridViewRow row = gv_child.Rows[i];
+                item2["Child Name"] = row.Cells[1].Text;
+                item2["Child Age"] = row.Cells[2].Text;
+            }
+            item2.Update();
+           
+        }
 
         protected void btn_cancel_Click(object sender, EventArgs e)
         {
@@ -245,7 +408,7 @@ namespace EmployeeCard.AddEmployeeCard
             DataTable dtSource1 = ViewState["dtSource1"] as DataTable;
             dtSource1.Rows[row.RowIndex]["Child Name"] = name;
             dtSource1.Rows[row.RowIndex]["Child Age"] = age;
-         //   ViewState["dtSource"] = dtSource;
+            //ViewState["dtSource"] = dtSource;
             gv_child.EditIndex = -1;
             gv_child.DataSource = dtSource1;
             gv_child.DataBind();

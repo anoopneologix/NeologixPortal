@@ -479,6 +479,10 @@ namespace EmployeeCard.AddEmployeeCard {
             "artCodeGenerator", "12.0.0.0")]
         protected global::System.Web.UI.WebControls.Button btn_cancel;
         
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
+        protected global::System.Web.UI.WebControls.Label lbl_alert;
+        
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebPartCodeGenerator", "12.0.0.0")]
         public static implicit operator global::System.Web.UI.TemplateControl(AddEmployeeCard target) 
         {
@@ -1327,7 +1331,7 @@ namespace EmployeeCard.AddEmployeeCard {
                     "ID"};
             @__ctrl.ForeColor = ((System.Drawing.Color)(global::System.Drawing.Color.FromArgb(51, 51, 51)));
             @__ctrl.GridLines = global::System.Web.UI.WebControls.GridLines.None;
-            @__ctrl.Width = new System.Web.UI.WebControls.Unit(913D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(961D, global::System.Web.UI.WebControls.UnitType.Pixel);
             this.@__BuildControl__control3(@__ctrl.AlternatingRowStyle);
             this.@__BuildControl__control4(@__ctrl.Columns);
             this.@__BuildControl__control10(@__ctrl.EditRowStyle);
@@ -1757,7 +1761,7 @@ namespace EmployeeCard.AddEmployeeCard {
                     "ID"};
             @__ctrl.ForeColor = ((System.Drawing.Color)(global::System.Drawing.Color.FromArgb(51, 51, 51)));
             @__ctrl.GridLines = global::System.Web.UI.WebControls.GridLines.None;
-            @__ctrl.Width = new System.Web.UI.WebControls.Unit(921D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(961D, global::System.Web.UI.WebControls.UnitType.Pixel);
             this.@__BuildControl__control20(@__ctrl.AlternatingRowStyle);
             this.@__BuildControl__control21(@__ctrl.Columns);
             this.@__BuildControl__control30(@__ctrl.EditRowStyle);
@@ -2091,7 +2095,7 @@ namespace EmployeeCard.AddEmployeeCard {
                     "ID"};
             @__ctrl.ForeColor = ((System.Drawing.Color)(global::System.Drawing.Color.FromArgb(51, 51, 51)));
             @__ctrl.GridLines = global::System.Web.UI.WebControls.GridLines.None;
-            @__ctrl.Width = new System.Web.UI.WebControls.Unit(928D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(961D, global::System.Web.UI.WebControls.UnitType.Pixel);
             this.@__BuildControl__control40(@__ctrl.AlternatingRowStyle);
             this.@__BuildControl__control41(@__ctrl.Columns);
             this.@__BuildControl__control48(@__ctrl.EditRowStyle);
@@ -2548,7 +2552,7 @@ namespace EmployeeCard.AddEmployeeCard {
                     "ID"};
             @__ctrl.ForeColor = ((System.Drawing.Color)(global::System.Drawing.Color.FromArgb(51, 51, 51)));
             @__ctrl.GridLines = global::System.Web.UI.WebControls.GridLines.None;
-            @__ctrl.Width = new System.Web.UI.WebControls.Unit(977D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(961D, global::System.Web.UI.WebControls.UnitType.Pixel);
             this.@__BuildControl__control58(@__ctrl.AlternatingRowStyle);
             this.@__BuildControl__control59(@__ctrl.Columns);
             this.@__BuildControl__control69(@__ctrl.EditRowStyle);
@@ -2921,7 +2925,7 @@ namespace EmployeeCard.AddEmployeeCard {
                     "ID"};
             @__ctrl.ForeColor = ((System.Drawing.Color)(global::System.Drawing.Color.FromArgb(51, 51, 51)));
             @__ctrl.GridLines = global::System.Web.UI.WebControls.GridLines.None;
-            @__ctrl.Width = new System.Web.UI.WebControls.Unit(951D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(961D, global::System.Web.UI.WebControls.UnitType.Pixel);
             this.@__BuildControl__control79(@__ctrl.AlternatingRowStyle);
             this.@__BuildControl__control80(@__ctrl.Columns);
             this.@__BuildControl__control88(@__ctrl.EditRowStyle);
@@ -3212,7 +3216,7 @@ namespace EmployeeCard.AddEmployeeCard {
                     "ID"};
             @__ctrl.ForeColor = ((System.Drawing.Color)(global::System.Drawing.Color.FromArgb(51, 51, 51)));
             @__ctrl.GridLines = global::System.Web.UI.WebControls.GridLines.None;
-            @__ctrl.Width = new System.Web.UI.WebControls.Unit(959D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(961D, global::System.Web.UI.WebControls.UnitType.Pixel);
             this.@__BuildControl__control98(@__ctrl.AlternatingRowStyle);
             this.@__BuildControl__control99(@__ctrl.Columns);
             this.@__BuildControl__control105(@__ctrl.EditRowStyle);
@@ -3606,6 +3610,19 @@ namespace EmployeeCard.AddEmployeeCard {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "12.0.0.0")]
+        private global::System.Web.UI.WebControls.Label @__BuildControllbl_alert() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            this.lbl_alert = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            @__ctrl.ID = "lbl_alert";
+            @__ctrl.Text = "Alert";
+            return @__ctrl;
+        }
+        
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
         private void @__BuildControlTree(global::EmployeeCard.AddEmployeeCard.AddEmployeeCard @__ctrl) {
             System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
             @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
@@ -3886,9 +3903,12 @@ namespace EmployeeCard.AddEmployeeCard {
             global::System.Web.UI.WebControls.Button @__ctrl47;
             @__ctrl47 = this.@__BuildControlbtn_cancel();
             @__parser.AddParsedSubObject(@__ctrl47);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n    <br />\r\n    &nbsp;&nbsp;"));
+            global::System.Web.UI.WebControls.Label @__ctrl48;
+            @__ctrl48 = this.@__BuildControllbl_alert();
+            @__parser.AddParsedSubObject(@__ctrl48);
             @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-    <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
     <br />
 </div>

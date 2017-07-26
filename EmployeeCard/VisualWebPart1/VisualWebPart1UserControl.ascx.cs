@@ -365,7 +365,7 @@ namespace EmployeeCard.VisualWebPart1
                 dt3.Columns.Add("Name");
                 dt3.Columns.Add("Validity From");
                 dt3.Columns.Add("Validity To");
-
+                     
 
                 foreach (SPListItem item in newctitems)
                 {
@@ -645,8 +645,13 @@ namespace EmployeeCard.VisualWebPart1
 
                     dr5[0] = item["ID"].ToString();
                     dr5[1] = item["Designation"].ToString();
-                    dr5[2] = item["From"].ToString();
-                    dr5[3] = item["To"].ToString();
+                  
+                    DateTime valFrom = Convert.ToDateTime(item["From"].ToString());
+                    dr5[2] = valFrom.ToShortDateString();
+                   // dr5[3] = item["To"].ToString();
+
+                    DateTime valFrom2 = Convert.ToDateTime(item["To"].ToString());
+                    dr5[3] = valFrom2.ToShortDateString();
                     dr5[4] = item["Reporting Officer"].ToString();
                     dt5.Rows.Add(dr5);
                 }
