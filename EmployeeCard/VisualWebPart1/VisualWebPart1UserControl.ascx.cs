@@ -18,70 +18,122 @@ namespace EmployeeCard.VisualWebPart1
           if (!IsPostBack)
             {
               string siteURL = SPContext.Current.Site.Url.ToString() + "/HR";
-               using (SPSite site = new SPSite(siteURL))
-                 {
-                
+              using (SPSite site = new SPSite(siteURL))
+              {
+
                   using (SPWeb web = SPContext.Current.Web)
-                   {
-                    SPList PDlist = web.Lists["Personal Details"];
-                    SPQuery PDquery = new SPQuery();
-                    PDquery.Query = string.Concat("<Where><Eq><FieldRef Name='Author' LookupId='True'/> <Value Type='Lookup'>", web.CurrentUser.ID.ToString(), "</Value></Eq></Where>");
-                    //SPListItemCollection items = PDlist.Items;
-                    SPListItemCollection newitems = PDlist.GetItems(PDquery);
+                  {
+                      SPList PDlist = web.Lists["Personal Details"];
+                      SPQuery PDquery = new SPQuery();
+                      String qEmpId = Request.QueryString["empid"].ToString();
 
-                    foreach (SPListItem item in newitems)
-                    {
-                        txt_id.Text = Convert.ToString(item["Employee Id"]);
-                        txt_name.Text = Convert.ToString(item["Name"]);
-                        dp_doj.SelectedDate = Convert.ToDateTime(item["DOJ"].ToString());
-                        txt_blood.Text = Convert.ToString(item["Blood GP"]);
-                        dtcDoB.SelectedDate = Convert.ToDateTime(item["DOB"]);
-                        txt_pancard.Text = Convert.ToString(item["Pan card"]);
-                        txt_officialemail.Text = Convert.ToString(item["OfficialEmail"]);
-                        txt_personalemail.Text = Convert.ToString(item["PersonalEmail"]);
-                        txt_mobno.Text = Convert.ToString(item["Mobile No"]);
-                      
-                        txt_permantaddr.Text = ScrubHtml(Convert.ToString(item["Permanent Address"]));
-                     
-                        txt_current.Text = ScrubHtml(Convert.ToString(item["Current Address"]));
-                 
-                        txt_emercontactno.Text = Convert.ToString(item["Emergency Contact No"]);
-                        txt_residenceno.Text = Convert.ToString(item["Residence No"]);
-                        txt_father.Text = Convert.ToString(item["Father's Name"]);
-                        txt_mothernam.Text = Convert.ToString(item["Mother's Name"]);
-                        if (string.Compare(Convert.ToString(item["Marital status"]), "Single") == 0)
-                        {
+                      if (!string.IsNullOrEmpty(qEmpId))
+                  
+                      {
+                          PDquery.Query = string.Concat("<Where><Eq><FieldRef Name='Employee_x0020_Id' /> <Value Type='Text'>", qEmpId, "</Value></Eq></Where>");
+                          SPListItemCollection newitems = PDlist.GetItems(PDquery);
 
-                            rdbtn_single.Checked = true;
+                          foreach (SPListItem item in newitems)
+                          {
+                              txt_id.Text = Convert.ToString(item["Employee Id"]);
+                              txt_name.Text = Convert.ToString(item["Name"]);
+                              dp_doj.SelectedDate = Convert.ToDateTime(item["DOJ"].ToString());
+                              txt_blood.Text = Convert.ToString(item["Blood GP"]);
+                              dtcDoB.SelectedDate = Convert.ToDateTime(item["DOB"]);
+                              txt_pancard.Text = Convert.ToString(item["Pan card"]);
+                              txt_officialemail.Text = Convert.ToString(item["OfficialEmail"]);
+                              txt_personalemail.Text = Convert.ToString(item["PersonalEmail"]);
+                              txt_mobno.Text = Convert.ToString(item["Mobile No"]);
 
-                        }
-                        else
-                        {
-                            rdbtn_married.Checked = true;
-                        }
+                              txt_permantaddr.Text = ScrubHtml(Convert.ToString(item["Permanent Address"]));
 
-                        dtc_marriageanniversary.SelectedDate = Convert.ToDateTime(item["Marriage Anniversary"]);
-                        txt_spousename.Text = Convert.ToString(item["Spouse Name"]);
-                        dtcspouseDoB.SelectedDate = Convert.ToDateTime(item["Spouse DOB"]);
-                        txt_spousedesignation.Text = Convert.ToString(item["Spouse Designation"]);
-                        txt_spouseorganisation.Text = Convert.ToString(item["Spouse Organisation"]);
-                    }
+                              txt_current.Text = ScrubHtml(Convert.ToString(item["Current Address"]));
+
+                              txt_emercontactno.Text = Convert.ToString(item["Emergency Contact No"]);
+                              txt_residenceno.Text = Convert.ToString(item["Residence No"]);
+                              txt_father.Text = Convert.ToString(item["Father's Name"]);
+                              txt_mothernam.Text = Convert.ToString(item["Mother's Name"]);
+                              if (string.Compare(Convert.ToString(item["Marital status"]), "Single") == 0)
+                              {
+
+                                  rdbtn_single.Checked = true;
+
+                              }
+                              else
+                              {
+                                  rdbtn_married.Checked = true;
+                              }
+
+                              dtc_marriageanniversary.SelectedDate = Convert.ToDateTime(item["Marriage Anniversary"]);
+                              txt_spousename.Text = Convert.ToString(item["Spouse Name"]);
+                              dtcspouseDoB.SelectedDate = Convert.ToDateTime(item["Spouse DOB"]);
+                              txt_spousedesignation.Text = Convert.ToString(item["Spouse Designation"]);
+                              txt_spouseorganisation.Text = Convert.ToString(item["Spouse Organisation"]);
+                          }
 
 
 
-                        childgvbind(web);
-                        educationgvbind(web);
-                        certificategvbind(web);
-                        careersgvbind(web);
-                        neoexpgvbind(web);
-                        personalitygvbind(web);
+                          childgvbind(web);
+                          educationgvbind(web);
+                          certificategvbind(web);
+                          careersgvbind(web);
+                          neoexpgvbind(web);
+                          personalitygvbind(web);
 
-                    }
+                      }
 
-                }
+                  }
+              }
             }
         }
 
+        protected void btn_Save_Click(object sender, EventArgs e)
+        {
+
+
+            SPWeb web = SPContext.Current.Web;
+            SPList PDlist = web.Lists["Personal Details"];
+            SPQuery PDquery = new SPQuery();
+            PDquery.Query = string.Concat("<Where><Eq><FieldRef Name='Employee_x0020_Id' /> <Value Type='Text'>", txt_id.Text, "</Value></Eq></Where>");
+           
+            //SPListItemCollection items = PDlist.Items;
+            SPListItemCollection newitems = PDlist.GetItems(PDquery);
+
+            foreach (SPListItem item in newitems)
+            {
+                item["Employee Id"] = txt_id.Text;
+                item["Name"] = txt_name.Text;
+                item["DOJ"] = dp_doj.SelectedDate;
+                item["Blood GP"] = txt_blood.Text;
+                item["DOB"] = dtcDoB.SelectedDate;
+                item["Pan card"] = txt_pancard.Text;
+                item["OfficialEmail"] = txt_officialemail.Text;
+                item["PersonalEmail"] = txt_personalemail.Text;
+                item["Mobile No"] = txt_mobno.Text;
+                item["Permanent Address"] = txt_permantaddr.Text;
+                item["Current Address"] = txt_current.Text;
+                item["Emergency Contact No"] = txt_emercontactno.Text;
+                item["Residence No"] = txt_residenceno.Text;
+                item["Father's Name"] = txt_father.Text;
+                item["Mother's Name"] = txt_mothernam.Text;
+                if (rdbtn_single.Checked == true)
+                {
+                    item["Marital status"] = "Single";
+                }
+                else
+                {
+                    item["Marital status"] = "Married";
+                }
+
+                item["Marriage Anniversary"] = dtc_marriageanniversary.SelectedDate;
+                item["Spouse Name"] = txt_spousename.Text;
+                item["Spouse DOB"] = dtcspouseDoB.SelectedDate;
+                item["Spouse Designation"] = txt_spousedesignation.Text;
+                item["Spouse Organisation"] = txt_spousedesignation.Text;
+                item.Update();
+
+            }
+        }
         public static string ScrubHtml(string value)
         {
             var step1 = Regex.Replace(value, @"<[^>]+>|&nbsp;", "").Trim();
@@ -877,52 +929,7 @@ namespace EmployeeCard.VisualWebPart1
             
         }
 
-        protected void btn_Save_Click(object sender, EventArgs e)
-        {
-          
-                
-                    SPWeb web = SPContext.Current.Web;
-                    SPList PDlist = web.Lists["Personal Details"];
-                    SPQuery PDquery = new SPQuery();
-                    PDquery.Query = string.Concat("<Where><Eq><FieldRef Name='Employee_x0020_Id' /> <Value Type='Text'>", txt_id.Text, "</Value></Eq></Where>");
-                    //SPListItemCollection items = PDlist.Items;
-                    SPListItemCollection newitems = PDlist.GetItems(PDquery);
-
-                    foreach (SPListItem item in newitems)
-                    {
-                        item["Employee Id"] = txt_id.Text;
-                        item["Name"] = txt_name.Text;
-                        item["DOJ"] = dp_doj.SelectedDate;
-                        item["Blood GP"] = txt_blood.Text;
-                        item["DOB"] = dtcDoB.SelectedDate;
-                        item["Pan card"] = txt_pancard.Text;
-                        item["OfficialEmail"] = txt_officialemail.Text;
-                        item["PersonalEmail"] = txt_personalemail.Text;
-                        item["Mobile No"] = txt_mobno.Text;
-                        item["Permanent Address"] = txt_permantaddr.Text;
-                        item["Current Address"] = txt_current.Text;
-                        item["Emergency Contact No"] = txt_emercontactno.Text;
-                        item["Residence No"] = txt_residenceno.Text;
-                        item["Father's Name"] = txt_father.Text;
-                        item["Mother's Name"] = txt_mothernam.Text;
-                        if (rdbtn_single.Checked == true)
-                        {
-                            item["Marital status"] = "Single";
-                        }
-                        else
-                        {
-                            item["Marital status"] = "Married";
-                        }
-
-                        item["Marriage Anniversary"] = dtc_marriageanniversary.SelectedDate;
-                        item["Spouse Name"] = txt_spousename.Text;
-                        item["Spouse DOB"] = dtcspouseDoB.SelectedDate;
-                        item["Spouse Designation"] = txt_spousedesignation.Text;
-                        item["Spouse Organisation"] = txt_spousedesignation.Text;
-                        item.Update();
-
-                    }
-             }
+     
 
         protected void gv_education_SelectedIndexChanged(object sender, EventArgs e)
         {

@@ -5,5 +5,7 @@
     <ElementFile Location="VisualWebPart1\VisualWebPart1.webpart" />
     <ElementManifest Location="AddEmployeeCard\Elements.xml" />
     <ElementFile Location="AddEmployeeCard\AddEmployeeCard.webpart" />
+    <ElementManifest Location="EmployeeList\Elements.xml" />
+    <ElementFile Location="EmployeeList\EmployeeList.webpart" />
   </ElementManifests>
 </Feature>

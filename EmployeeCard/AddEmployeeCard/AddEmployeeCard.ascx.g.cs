@@ -249,10 +249,6 @@ namespace EmployeeCard.AddEmployeeCard {
         
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "12.0.0.0")]
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
-            "artCodeGenerator", "12.0.0.0")]
         protected global::System.Web.UI.WebControls.Label lbl_qualif;
         
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
@@ -477,10 +473,6 @@ namespace EmployeeCard.AddEmployeeCard {
         
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "12.0.0.0")]
-        protected global::System.Web.UI.WebControls.Button btn_cancel;
-        
-        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
-            "artCodeGenerator", "12.0.0.0")]
         protected global::System.Web.UI.WebControls.Label lbl_alert;
         
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebPartCodeGenerator", "12.0.0.0")]
@@ -503,6 +495,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.Font.Overline = false;
             @__ctrl.Text = "Personal Details";
             @__ctrl.Font.Size = global::System.Web.UI.WebControls.FontUnit.Larger;
+            @__ctrl.CssClass = "Label";
             return @__ctrl;
         }
         
@@ -516,7 +509,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_id";
             @__ctrl.Text = "Employee Id";
-            ((System.Web.UI.IAttributeAccessor)(@__ctrl)).SetAttribute("Style", "margin-right: 2px");
+            @__ctrl.CssClass = "label";
             return @__ctrl;
         }
         
@@ -529,7 +522,6 @@ namespace EmployeeCard.AddEmployeeCard {
             this.txt_id = @__ctrl;
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "txt_id";
-            ((System.Web.UI.IAttributeAccessor)(@__ctrl)).SetAttribute("Style", "text-align: center");
             return @__ctrl;
         }
         
@@ -543,6 +535,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_name";
             @__ctrl.Text = "Name";
+            @__ctrl.CssClass = "label";
             return @__ctrl;
         }
         
@@ -555,7 +548,7 @@ namespace EmployeeCard.AddEmployeeCard {
             this.txt_name = @__ctrl;
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "txt_name";
-            ((System.Web.UI.IAttributeAccessor)(@__ctrl)).SetAttribute("Style", "text-align: center");
+            @__ctrl.CssClass = "textbox";
             return @__ctrl;
         }
         
@@ -736,6 +729,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "txt_permantaddr";
             @__ctrl.TextMode = global::System.Web.UI.WebControls.TextBoxMode.MultiLine;
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(177D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -762,6 +756,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "txt_current";
             @__ctrl.TextMode = global::System.Web.UI.WebControls.TextBoxMode.MultiLine;
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(179D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -1092,6 +1087,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_chd";
             @__ctrl.Text = "Child Name";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(164D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -1106,6 +1102,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_age";
             @__ctrl.Text = "Child Age";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(164D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -1352,8 +1349,6 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.RowEditing += new System.Web.UI.WebControls.GridViewEditEventHandler(this.gv_child_RowEditing);
             @__ctrl.RowUpdating -= new System.Web.UI.WebControls.GridViewUpdateEventHandler(this.gv_child_RowUpdating);
             @__ctrl.RowUpdating += new System.Web.UI.WebControls.GridViewUpdateEventHandler(this.gv_child_RowUpdating);
-            @__ctrl.SelectedIndexChanged -= new System.EventHandler(this.gv_child_SelectedIndexChanged1);
-            @__ctrl.SelectedIndexChanged += new System.EventHandler(this.gv_child_SelectedIndexChanged1);
             return @__ctrl;
         }
         
@@ -1377,20 +1372,6 @@ namespace EmployeeCard.AddEmployeeCard {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "12.0.0.0")]
-        private global::System.Web.UI.WebControls.Label @__BuildControlLabel1() {
-            global::System.Web.UI.WebControls.Label @__ctrl;
-            @__ctrl = new global::System.Web.UI.WebControls.Label();
-            this.Label1 = @__ctrl;
-            @__ctrl.TemplateControl = this;
-            @__ctrl.ApplyStyleSheetSkin(this.Page);
-            @__ctrl.ID = "Label1";
-            @__ctrl.Text = "     ";
-            return @__ctrl;
-        }
-        
-        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
-        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
-            "artCodeGenerator", "12.0.0.0")]
         private global::System.Web.UI.WebControls.Label @__BuildControllbl_qualif() {
             global::System.Web.UI.WebControls.Label @__ctrl;
             @__ctrl = new global::System.Web.UI.WebControls.Label();
@@ -1399,6 +1380,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_qualif";
             @__ctrl.Text = "Qualification";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(164D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -1413,6 +1395,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_schl";
             @__ctrl.Text = "School/College";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(164D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -1427,6 +1410,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_uni";
             @__ctrl.Text = "University";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(166D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -1441,6 +1425,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_yp";
             @__ctrl.Text = "Year Of Passing";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(168D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -1455,6 +1440,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_marks";
             @__ctrl.Text = "Marks";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(170D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -1813,6 +1799,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "Label2";
             @__ctrl.Text = "Name";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(163D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -1827,6 +1814,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_from";
             @__ctrl.Text = "Validity From";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(164D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -1841,6 +1829,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_valto";
             @__ctrl.Text = "Validity To";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(164D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -2147,6 +2136,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_desig";
             @__ctrl.Text = "Designation";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(163D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -2161,6 +2151,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_company";
             @__ctrl.Text = "Company";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(163D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -2175,6 +2166,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_Tenurefrom";
             @__ctrl.Text = "Tenure From";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(163D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -2189,6 +2181,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_tenureto";
             @__ctrl.Text = "Tenure To";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(163D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -2203,6 +2196,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_tech";
             @__ctrl.Text = "Technical Skill";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(163D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -2217,6 +2211,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_fnlsal";
             @__ctrl.Text = "Final Salary";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(163D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -2604,6 +2599,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_neodesg";
             @__ctrl.Text = "Designation";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(163D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -2618,6 +2614,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_neofrom";
             @__ctrl.Text = "From";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(163D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -2632,6 +2629,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_neoto";
             @__ctrl.Text = "To";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(163D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -2646,6 +2644,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_RO";
             @__ctrl.Text = "Reporting Officer";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(163D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -2977,6 +2976,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_stren";
             @__ctrl.Text = "Strength";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(163D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -2991,6 +2991,7 @@ namespace EmployeeCard.AddEmployeeCard {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "lbl_weak";
             @__ctrl.Text = "Weakness";
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(163D, global::System.Web.UI.WebControls.UnitType.Pixel);
             return @__ctrl;
         }
         
@@ -3245,323 +3246,271 @@ namespace EmployeeCard.AddEmployeeCard {
             "artCodeGenerator", "12.0.0.0")]
         private void @__BuildControl__control2(System.Web.UI.Control @__ctrl) {
             System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        \r\n            <div  style=\"text-align:center;width:800px\" >\r\n          " +
+                        "  "));
             global::System.Web.UI.WebControls.Label @__ctrl1;
             @__ctrl1 = this.@__BuildControlctl12();
             @__parser.AddParsedSubObject(@__ctrl1);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            <br />\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n             </div>\r\n            <br />\r\n            <br />\r\n              <div" +
+                        " >\r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl2;
             @__ctrl2 = this.@__BuildControllbl_chd();
             @__parser.AddParsedSubObject(@__ctrl2);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        \r\n          \r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl3;
             @__ctrl3 = this.@__BuildControllbl_age();
             @__parser.AddParsedSubObject(@__ctrl3);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            </div> \r\n            <br />\r\n           <div>\r\n            "));
             global::System.Web.UI.WebControls.TextBox @__ctrl4;
             @__ctrl4 = this.@__BuildControltxt_chdname();
             @__parser.AddParsedSubObject(@__ctrl4);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp; &nbsp;\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           \r\n          \r\n          "));
             global::System.Web.UI.WebControls.TextBox @__ctrl5;
             @__ctrl5 = this.@__BuildControltxt_chdage();
             @__parser.AddParsedSubObject(@__ctrl5);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n&nbsp;\r\n        &nbsp;\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n         \r\n\r\n            "));
             global::System.Web.UI.WebControls.Button @__ctrl6;
             @__ctrl6 = this.@__BuildControlbtn_add();
             @__parser.AddParsedSubObject(@__ctrl6);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            <br />\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                 </div>\r\n            <br />\r\n            <br />\r\n            "));
             global::System.Web.UI.WebControls.GridView @__ctrl7;
             @__ctrl7 = this.@__BuildControlgv_child();
             @__parser.AddParsedSubObject(@__ctrl7);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br />
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n     \r\n            <br />\r\n            <br />\r\n        \r\n  " +
+                        "          <br />\r\n                  <div  style=\"text-align:center;width:800px\" " +
+                        ">\r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl8;
             @__ctrl8 = this.@__BuildControllbl_education();
             @__parser.AddParsedSubObject(@__ctrl8);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<br />&nbsp;"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                  </div>\r\n           \r\n            <br />\r\n            <br />\r\n" +
+                        "            \r\n             <div >\r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl9;
-            @__ctrl9 = this.@__BuildControlLabel1();
+            @__ctrl9 = this.@__BuildControllbl_qualif();
             @__parser.AddParsedSubObject(@__ctrl9);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           \r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl10;
-            @__ctrl10 = this.@__BuildControllbl_qualif();
+            @__ctrl10 = this.@__BuildControllbl_schl();
             @__parser.AddParsedSubObject(@__ctrl10);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n              \r\n           "));
             global::System.Web.UI.WebControls.Label @__ctrl11;
-            @__ctrl11 = this.@__BuildControllbl_schl();
+            @__ctrl11 = this.@__BuildControllbl_uni();
             @__parser.AddParsedSubObject(@__ctrl11);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n         \r\n         \r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl12;
-            @__ctrl12 = this.@__BuildControllbl_uni();
+            @__ctrl12 = this.@__BuildControllbl_yp();
             @__parser.AddParsedSubObject(@__ctrl12);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            \r\n            \r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl13;
-            @__ctrl13 = this.@__BuildControllbl_yp();
+            @__ctrl13 = this.@__BuildControllbl_marks();
             @__parser.AddParsedSubObject(@__ctrl13);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n            "));
-            global::System.Web.UI.WebControls.Label @__ctrl14;
-            @__ctrl14 = this.@__BuildControllbl_marks();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n             </div>  \r\n            <br />\r\n            <div>\r\n            "));
+            global::System.Web.UI.WebControls.TextBox @__ctrl14;
+            @__ctrl14 = this.@__BuildControltxt_quali();
             @__parser.AddParsedSubObject(@__ctrl14);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n         \r\n            "));
             global::System.Web.UI.WebControls.TextBox @__ctrl15;
-            @__ctrl15 = this.@__BuildControltxt_quali();
+            @__ctrl15 = this.@__BuildControltxt_school();
             @__parser.AddParsedSubObject(@__ctrl15);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n       \r\n            "));
             global::System.Web.UI.WebControls.TextBox @__ctrl16;
-            @__ctrl16 = this.@__BuildControltxt_school();
+            @__ctrl16 = this.@__BuildControltxt_uni();
             @__parser.AddParsedSubObject(@__ctrl16);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        \r\n            "));
             global::System.Web.UI.WebControls.TextBox @__ctrl17;
-            @__ctrl17 = this.@__BuildControltxt_uni();
+            @__ctrl17 = this.@__BuildControltxt_yop();
             @__parser.AddParsedSubObject(@__ctrl17);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n         \r\n            "));
             global::System.Web.UI.WebControls.TextBox @__ctrl18;
-            @__ctrl18 = this.@__BuildControltxt_yop();
+            @__ctrl18 = this.@__BuildControltxt_marks();
             @__parser.AddParsedSubObject(@__ctrl18);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;"));
-            global::System.Web.UI.WebControls.TextBox @__ctrl19;
-            @__ctrl19 = this.@__BuildControltxt_marks();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        \r\n            "));
+            global::System.Web.UI.WebControls.Button @__ctrl19;
+            @__ctrl19 = this.@__BuildControlbtn_addedu();
             @__parser.AddParsedSubObject(@__ctrl19);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n            "));
-            global::System.Web.UI.WebControls.Button @__ctrl20;
-            @__ctrl20 = this.@__BuildControlbtn_addedu();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                </div>\r\n            <br />\r\n            "));
+            global::System.Web.UI.WebControls.GridView @__ctrl20;
+            @__ctrl20 = this.@__BuildControlgv_education();
             @__parser.AddParsedSubObject(@__ctrl20);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            "));
-            global::System.Web.UI.WebControls.GridView @__ctrl21;
-            @__ctrl21 = this.@__BuildControlgv_education();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            <br />\r\n         <div  style=\"text-align:center" +
+                        ";width:800px\" >\r\n            "));
+            global::System.Web.UI.WebControls.Label @__ctrl21;
+            @__ctrl21 = this.@__BuildControllbl_certification();
             @__parser.AddParsedSubObject(@__ctrl21);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-            <br />
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n             </div>\r\n            <br />\r\n            <br />\r\n            <div>\r" +
+                        "\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl22;
-            @__ctrl22 = this.@__BuildControllbl_certification();
+            @__ctrl22 = this.@__BuildControlLabel2();
             @__parser.AddParsedSubObject(@__ctrl22);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            <br />\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        \r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl23;
-            @__ctrl23 = this.@__BuildControlLabel2();
+            @__ctrl23 = this.@__BuildControllbl_from();
             @__parser.AddParsedSubObject(@__ctrl23);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           \r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl24;
-            @__ctrl24 = this.@__BuildControllbl_from();
+            @__ctrl24 = this.@__BuildControllbl_valto();
             @__parser.AddParsedSubObject(@__ctrl24);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n            "));
-            global::System.Web.UI.WebControls.Label @__ctrl25;
-            @__ctrl25 = this.@__BuildControllbl_valto();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                </div>\r\n            <br />\r\n            <div>\r\n            "));
+            global::System.Web.UI.WebControls.TextBox @__ctrl25;
+            @__ctrl25 = this.@__BuildControltxt_certname();
             @__parser.AddParsedSubObject(@__ctrl25);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n          \r\n            "));
             global::System.Web.UI.WebControls.TextBox @__ctrl26;
-            @__ctrl26 = this.@__BuildControltxt_certname();
+            @__ctrl26 = this.@__BuildControltxt_valfrom();
             @__parser.AddParsedSubObject(@__ctrl26);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           \r\n            "));
             global::System.Web.UI.WebControls.TextBox @__ctrl27;
-            @__ctrl27 = this.@__BuildControltxt_valfrom();
+            @__ctrl27 = this.@__BuildControltxt_valto();
             @__parser.AddParsedSubObject(@__ctrl27);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;\r\n            "));
-            global::System.Web.UI.WebControls.TextBox @__ctrl28;
-            @__ctrl28 = this.@__BuildControltxt_valto();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           \r\n            "));
+            global::System.Web.UI.WebControls.Button @__ctrl28;
+            @__ctrl28 = this.@__BuildControlbtn_certadd();
             @__parser.AddParsedSubObject(@__ctrl28);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n            "));
-            global::System.Web.UI.WebControls.Button @__ctrl29;
-            @__ctrl29 = this.@__BuildControlbtn_certadd();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                </div>\r\n            <br />\r\n            <br />\r\n            "));
+            global::System.Web.UI.WebControls.GridView @__ctrl29;
+            @__ctrl29 = this.@__BuildControlgv_certifications();
             @__parser.AddParsedSubObject(@__ctrl29);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            <br />\r\n            "));
-            global::System.Web.UI.WebControls.GridView @__ctrl30;
-            @__ctrl30 = this.@__BuildControlgv_certifications();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            <div  style=\"text-align:center;width:800px\" >\r\n" +
+                        "            "));
+            global::System.Web.UI.WebControls.Label @__ctrl30;
+            @__ctrl30 = this.@__BuildControllbl_careers();
             @__parser.AddParsedSubObject(@__ctrl30);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n               </div>\r\n            <br />\r\n            <br />\r\n            <div" +
+                        ">\r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl31;
-            @__ctrl31 = this.@__BuildControllbl_careers();
+            @__ctrl31 = this.@__BuildControllbl_desig();
             @__parser.AddParsedSubObject(@__ctrl31);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            <br />\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n         \r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl32;
-            @__ctrl32 = this.@__BuildControllbl_desig();
+            @__ctrl32 = this.@__BuildControllbl_company();
             @__parser.AddParsedSubObject(@__ctrl32);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           "));
             global::System.Web.UI.WebControls.Label @__ctrl33;
-            @__ctrl33 = this.@__BuildControllbl_company();
+            @__ctrl33 = this.@__BuildControllbl_Tenurefrom();
             @__parser.AddParsedSubObject(@__ctrl33);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n         \r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl34;
-            @__ctrl34 = this.@__BuildControllbl_Tenurefrom();
+            @__ctrl34 = this.@__BuildControllbl_tenureto();
             @__parser.AddParsedSubObject(@__ctrl34);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n         \r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl35;
-            @__ctrl35 = this.@__BuildControllbl_tenureto();
+            @__ctrl35 = this.@__BuildControllbl_tech();
             @__parser.AddParsedSubObject(@__ctrl35);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           \r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl36;
-            @__ctrl36 = this.@__BuildControllbl_tech();
+            @__ctrl36 = this.@__BuildControllbl_fnlsal();
             @__parser.AddParsedSubObject(@__ctrl36);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n " +
-                        "           "));
-            global::System.Web.UI.WebControls.Label @__ctrl37;
-            @__ctrl37 = this.@__BuildControllbl_fnlsal();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                </div>\r\n            <br />\r\n            <div>\r\n            "));
+            global::System.Web.UI.WebControls.TextBox @__ctrl37;
+            @__ctrl37 = this.@__BuildControltxt_desg();
             @__parser.AddParsedSubObject(@__ctrl37);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           \r\n            "));
             global::System.Web.UI.WebControls.TextBox @__ctrl38;
-            @__ctrl38 = this.@__BuildControltxt_desg();
+            @__ctrl38 = this.@__BuildControltxt_comp();
             @__parser.AddParsedSubObject(@__ctrl38);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           "));
             global::System.Web.UI.WebControls.TextBox @__ctrl39;
-            @__ctrl39 = this.@__BuildControltxt_comp();
+            @__ctrl39 = this.@__BuildControltxt_tenurefrom();
             @__parser.AddParsedSubObject(@__ctrl39);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           "));
             global::System.Web.UI.WebControls.TextBox @__ctrl40;
-            @__ctrl40 = this.@__BuildControltxt_tenurefrom();
+            @__ctrl40 = this.@__BuildControltxt_tenureto();
             @__parser.AddParsedSubObject(@__ctrl40);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            "));
             global::System.Web.UI.WebControls.TextBox @__ctrl41;
-            @__ctrl41 = this.@__BuildControltxt_tenureto();
+            @__ctrl41 = this.@__BuildControltxt_skill();
             @__parser.AddParsedSubObject(@__ctrl41);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            "));
             global::System.Web.UI.WebControls.TextBox @__ctrl42;
-            @__ctrl42 = this.@__BuildControltxt_skill();
+            @__ctrl42 = this.@__BuildControltxt_sal();
             @__parser.AddParsedSubObject(@__ctrl42);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;"));
-            global::System.Web.UI.WebControls.TextBox @__ctrl43;
-            @__ctrl43 = this.@__BuildControltxt_sal();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            "));
+            global::System.Web.UI.WebControls.Button @__ctrl43;
+            @__ctrl43 = this.@__BuildControlbtn_careeradd();
             @__parser.AddParsedSubObject(@__ctrl43);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            "));
-            global::System.Web.UI.WebControls.Button @__ctrl44;
-            @__ctrl44 = this.@__BuildControlbtn_careeradd();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                </div>\r\n            "));
+            global::System.Web.UI.WebControls.GridView @__ctrl44;
+            @__ctrl44 = this.@__BuildControlgv_careers();
             @__parser.AddParsedSubObject(@__ctrl44);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            "));
-            global::System.Web.UI.WebControls.GridView @__ctrl45;
-            @__ctrl45 = this.@__BuildControlgv_careers();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            <br />\r\n            <br />\r\n         \r\n        " +
+                        "    <br />\r\n            <br />\r\n              <div  style=\"text-align:center;wid" +
+                        "th:800px\" >\r\n            "));
+            global::System.Web.UI.WebControls.Label @__ctrl45;
+            @__ctrl45 = this.@__BuildControllbl_neoexp();
             @__parser.AddParsedSubObject(@__ctrl45);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-            <br />
-            <br />
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br />
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n\r\n              </div>\r\n            <br />\r\n            <br />\r\n            <di" +
+                        "v>\r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl46;
-            @__ctrl46 = this.@__BuildControllbl_neoexp();
+            @__ctrl46 = this.@__BuildControllbl_neodesg();
             @__parser.AddParsedSubObject(@__ctrl46);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            <br />\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n         \r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl47;
-            @__ctrl47 = this.@__BuildControllbl_neodesg();
+            @__ctrl47 = this.@__BuildControllbl_neofrom();
             @__parser.AddParsedSubObject(@__ctrl47);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n         " +
-                        "   "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n          \r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl48;
-            @__ctrl48 = this.@__BuildControllbl_neofrom();
+            @__ctrl48 = this.@__BuildControllbl_neoto();
             @__parser.AddParsedSubObject(@__ctrl48);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           \r\n            "));
             global::System.Web.UI.WebControls.Label @__ctrl49;
-            @__ctrl49 = this.@__BuildControllbl_neoto();
+            @__ctrl49 = this.@__BuildControllbl_RO();
             @__parser.AddParsedSubObject(@__ctrl49);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            "));
-            global::System.Web.UI.WebControls.Label @__ctrl50;
-            @__ctrl50 = this.@__BuildControllbl_RO();
-            @__parser.AddParsedSubObject(@__ctrl50);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;\r\n            <br />\r\n            "));
-            global::System.Web.UI.WebControls.TextBox @__ctrl51;
-            @__ctrl51 = this.@__BuildControltxt_neodesg();
-            @__parser.AddParsedSubObject(@__ctrl51);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;"));
-            global::System.Web.UI.WebControls.TextBox @__ctrl52;
-            @__ctrl52 = this.@__BuildControltxt_neofrom();
-            @__parser.AddParsedSubObject(@__ctrl52);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;"));
-            global::System.Web.UI.WebControls.TextBox @__ctrl53;
-            @__ctrl53 = this.@__BuildControltxt_neoto();
-            @__parser.AddParsedSubObject(@__ctrl53);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;"));
-            global::System.Web.UI.WebControls.TextBox @__ctrl54;
-            @__ctrl54 = this.@__BuildControltxt_neoRo();
-            @__parser.AddParsedSubObject(@__ctrl54);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;\r\n            "));
-            global::System.Web.UI.WebControls.Button @__ctrl55;
-            @__ctrl55 = this.@__BuildControlbtn_neoadd();
-            @__parser.AddParsedSubObject(@__ctrl55);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            "));
-            global::System.Web.UI.WebControls.GridView @__ctrl56;
-            @__ctrl56 = this.@__BuildControlgv_neoexp();
-            @__parser.AddParsedSubObject(@__ctrl56);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-            <br />
-            <br />
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            "));
-            global::System.Web.UI.WebControls.Label @__ctrl57;
-            @__ctrl57 = this.@__BuildControllbl_streweak();
-            @__parser.AddParsedSubObject(@__ctrl57);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            <br />\r\n            "));
-            global::System.Web.UI.WebControls.Label @__ctrl58;
-            @__ctrl58 = this.@__BuildControllbl_stren();
-            @__parser.AddParsedSubObject(@__ctrl58);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n   " +
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                </div>\r\n           \r\n            <br />\r\n            <div>\r\n   " +
                         "         "));
-            global::System.Web.UI.WebControls.Label @__ctrl59;
-            @__ctrl59 = this.@__BuildControllbl_weak();
+            global::System.Web.UI.WebControls.TextBox @__ctrl50;
+            @__ctrl50 = this.@__BuildControltxt_neodesg();
+            @__parser.AddParsedSubObject(@__ctrl50);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           "));
+            global::System.Web.UI.WebControls.TextBox @__ctrl51;
+            @__ctrl51 = this.@__BuildControltxt_neofrom();
+            @__parser.AddParsedSubObject(@__ctrl51);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           "));
+            global::System.Web.UI.WebControls.TextBox @__ctrl52;
+            @__ctrl52 = this.@__BuildControltxt_neoto();
+            @__parser.AddParsedSubObject(@__ctrl52);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           "));
+            global::System.Web.UI.WebControls.TextBox @__ctrl53;
+            @__ctrl53 = this.@__BuildControltxt_neoRo();
+            @__parser.AddParsedSubObject(@__ctrl53);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            \r\n            "));
+            global::System.Web.UI.WebControls.Button @__ctrl54;
+            @__ctrl54 = this.@__BuildControlbtn_neoadd();
+            @__parser.AddParsedSubObject(@__ctrl54);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                </div>\r\n            <br />\r\n            "));
+            global::System.Web.UI.WebControls.GridView @__ctrl55;
+            @__ctrl55 = this.@__BuildControlgv_neoexp();
+            @__parser.AddParsedSubObject(@__ctrl55);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            <br />\r\n            <br />\r\n           <div  st" +
+                        "yle=\"text-align:center;width:800px\" >\r\n            "));
+            global::System.Web.UI.WebControls.Label @__ctrl56;
+            @__ctrl56 = this.@__BuildControllbl_streweak();
+            @__parser.AddParsedSubObject(@__ctrl56);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n               </div>\r\n            <br />\r\n            <br />\r\n            <div" +
+                        ">\r\n            "));
+            global::System.Web.UI.WebControls.Label @__ctrl57;
+            @__ctrl57 = this.@__BuildControllbl_stren();
+            @__parser.AddParsedSubObject(@__ctrl57);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n       \r\n            "));
+            global::System.Web.UI.WebControls.Label @__ctrl58;
+            @__ctrl58 = this.@__BuildControllbl_weak();
+            @__parser.AddParsedSubObject(@__ctrl58);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                </div>\r\n            <br />\r\n            <div>\r\n            "));
+            global::System.Web.UI.WebControls.TextBox @__ctrl59;
+            @__ctrl59 = this.@__BuildControltxt_stren();
             @__parser.AddParsedSubObject(@__ctrl59);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n          "));
             global::System.Web.UI.WebControls.TextBox @__ctrl60;
-            @__ctrl60 = this.@__BuildControltxt_stren();
+            @__ctrl60 = this.@__BuildControltxt_weak();
             @__parser.AddParsedSubObject(@__ctrl60);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;"));
-            global::System.Web.UI.WebControls.TextBox @__ctrl61;
-            @__ctrl61 = this.@__BuildControltxt_weak();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n          \r\n            "));
+            global::System.Web.UI.WebControls.Button @__ctrl61;
+            @__ctrl61 = this.@__BuildControlbtn_stenadd();
             @__parser.AddParsedSubObject(@__ctrl61);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;\r\n            "));
-            global::System.Web.UI.WebControls.Button @__ctrl62;
-            @__ctrl62 = this.@__BuildControlbtn_stenadd();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                </div>\r\n            "));
+            global::System.Web.UI.WebControls.GridView @__ctrl62;
+            @__ctrl62 = this.@__BuildControlgv_strength();
             @__parser.AddParsedSubObject(@__ctrl62);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            "));
-            global::System.Web.UI.WebControls.GridView @__ctrl63;
-            @__ctrl63 = this.@__BuildControlgv_strength();
-            @__parser.AddParsedSubObject(@__ctrl63);
             @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <br />\r\n            <br />\r\n            <br />\r\n            <br />\r" +
-                        "\n            &nbsp;<br />\r\n        "));
+                        "\n          <br />\r\n        "));
         }
         
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -3595,21 +3544,6 @@ namespace EmployeeCard.AddEmployeeCard {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "12.0.0.0")]
-        private global::System.Web.UI.WebControls.Button @__BuildControlbtn_cancel() {
-            global::System.Web.UI.WebControls.Button @__ctrl;
-            @__ctrl = new global::System.Web.UI.WebControls.Button();
-            this.btn_cancel = @__ctrl;
-            @__ctrl.ApplyStyleSheetSkin(this.Page);
-            @__ctrl.ID = "btn_cancel";
-            @__ctrl.Text = "Cancel";
-            @__ctrl.Click -= new System.EventHandler(this.btn_cancel_Click);
-            @__ctrl.Click += new System.EventHandler(this.btn_cancel_Click);
-            return @__ctrl;
-        }
-        
-        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
-        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
-            "artCodeGenerator", "12.0.0.0")]
         private global::System.Web.UI.WebControls.Label @__BuildControllbl_alert() {
             global::System.Web.UI.WebControls.Label @__ctrl;
             @__ctrl = new global::System.Web.UI.WebControls.Label();
@@ -3625,178 +3559,158 @@ namespace EmployeeCard.AddEmployeeCard {
             "artCodeGenerator", "12.0.0.0")]
         private void @__BuildControlTree(global::EmployeeCard.AddEmployeeCard.AddEmployeeCard @__ctrl) {
             System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-<div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
-    <br />
-    <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n<link href=\"D:\\Training Code\\NewRepo\\NeologixPortal\\EmployeeCard\\AddEmployeeCar" +
+                        "d\\Stylesheet1.css\" rel=\"stylesheet\" />\r\n\r\n<div>\r\n   <div style=\"text-align:cente" +
+                        "r;width:800px\">\r\n    "));
             global::System.Web.UI.WebControls.Label @__ctrl1;
             @__ctrl1 = this.@__BuildControllbl_PersonalDetails();
             @__parser.AddParsedSubObject(@__ctrl1);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />\r\n    &nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<table style=\"width: 10" +
-                        "0%;\">\r\n        <tr>\r\n            <td>\r\n\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n \r\n       </div>\r\n       <table style=\"width: 100%;\">\r\n        <tr>\r\n          " +
+                        "  <td colspan=\"2\">\r\n\r\n                "));
             global::System.Web.UI.WebControls.Label @__ctrl2;
             @__ctrl2 = this.@__BuildControllbl_id();
             @__parser.AddParsedSubObject(@__ctrl2);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n" +
-                        "bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n   \r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n               \r\n             <div style=\"float: right;width:400px\">  \r\n       " +
+                        "         "));
             global::System.Web.UI.WebControls.TextBox @__ctrl3;
             @__ctrl3 = this.@__BuildControltxt_id();
             @__parser.AddParsedSubObject(@__ctrl3);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n\r\n                <br />\r\n\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n\r\n              </div>\r\n                <br />\r\n                <br />\r\n       " +
+                        "         "));
             global::System.Web.UI.WebControls.Label @__ctrl4;
             @__ctrl4 = this.@__BuildControllbl_name();
             @__parser.AddParsedSubObject(@__ctrl4);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp" +
-                        ";&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n             \r\n             <div style=\"float: right;width:400px\">  \r\n         " +
+                        "       "));
             global::System.Web.UI.WebControls.TextBox @__ctrl5;
             @__ctrl5 = this.@__BuildControltxt_name();
             @__parser.AddParsedSubObject(@__ctrl5);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                    \r\n             </div >  \r\n                <br />\r\n         " +
+                        "       <br />\r\n                "));
             global::System.Web.UI.WebControls.Label @__ctrl6;
             @__ctrl6 = this.@__BuildControllbl_doj();
             @__parser.AddParsedSubObject(@__ctrl6);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp" +
-                        ";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                  <div style=\"float: right;width:400px\">\r\n              "));
             global::Microsoft.SharePoint.WebControls.DateTimeControl @__ctrl7;
             @__ctrl7 = this.@__BuildControldp_doj();
             @__parser.AddParsedSubObject(@__ctrl7);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                <br />
-                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                   </div>\r\n     \r\n                <br />\r\n                <br /" +
+                        ">\r\n                "));
             global::System.Web.UI.WebControls.Label @__ctrl8;
             @__ctrl8 = this.@__BuildControllbl_bloodgp();
             @__parser.AddParsedSubObject(@__ctrl8);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbs" +
-                        "p;\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n             \r\n                 <div style=\"float: right;width:400px\">\r\n       " +
+                        "        "));
             global::System.Web.UI.WebControls.TextBox @__ctrl9;
             @__ctrl9 = this.@__BuildControltxt_blood();
             @__parser.AddParsedSubObject(@__ctrl9);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                  </div>\r\n                <br />\r\n                <br />\r\n     " +
+                        "           "));
             global::System.Web.UI.WebControls.Label @__ctrl10;
             @__ctrl10 = this.@__BuildControllbl_dob();
             @__parser.AddParsedSubObject(@__ctrl10);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                 <div style=\"float: right;width:400px\">\r\n               "));
             global::Microsoft.SharePoint.WebControls.DateTimeControl @__ctrl11;
             @__ctrl11 = this.@__BuildControldtcDoB();
             @__parser.AddParsedSubObject(@__ctrl11);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                   </div>\r\n                <br />\r\n                <br />\r\n    " +
+                        "            "));
             global::System.Web.UI.WebControls.Label @__ctrl12;
             @__ctrl12 = this.@__BuildControllbl_pancard();
             @__parser.AddParsedSubObject(@__ctrl12);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbs" +
-                        "p;&nbsp;\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n              <div style=\"float: right;width:400px\">\r\n                "));
             global::System.Web.UI.WebControls.TextBox @__ctrl13;
             @__ctrl13 = this.@__BuildControltxt_pancard();
             @__parser.AddParsedSubObject(@__ctrl13);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                     </div>\r\n                <br />\r\n                <br />\r\n  " +
+                        "              "));
             global::System.Web.UI.WebControls.Label @__ctrl14;
             @__ctrl14 = this.@__BuildControllbl_officialemail();
             @__parser.AddParsedSubObject(@__ctrl14);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n             \r\n                  <div style=\"float: right;width:400px\">\r\n      " +
+                        "           "));
             global::System.Web.UI.WebControls.TextBox @__ctrl15;
             @__ctrl15 = this.@__BuildControltxt_officialemail();
             @__parser.AddParsedSubObject(@__ctrl15);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <br />
-                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                      </div>\r\n                <br />\r\n              \r\n         " +
+                        "       <br />\r\n                "));
             global::System.Web.UI.WebControls.Label @__ctrl16;
             @__ctrl16 = this.@__BuildControllbl_personalemail();
             @__parser.AddParsedSubObject(@__ctrl16);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n              <div style=\"float: right;width:400px\">\r\n    "));
             global::System.Web.UI.WebControls.TextBox @__ctrl17;
             @__ctrl17 = this.@__BuildControltxt_personalemail();
             @__parser.AddParsedSubObject(@__ctrl17);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                   </div>\r\n                <br />\r\n                <br />\r\n    " +
+                        "            "));
             global::System.Web.UI.WebControls.Label @__ctrl18;
             @__ctrl18 = this.@__BuildControllbl_permanentaddr();
             @__parser.AddParsedSubObject(@__ctrl18);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                 \r\n                <div style=\"float: right;width:400px\">\r\n    " +
+                        "    "));
             global::System.Web.UI.WebControls.TextBox @__ctrl19;
             @__ctrl19 = this.@__BuildControltxt_permantaddr();
             @__parser.AddParsedSubObject(@__ctrl19);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n       " +
-                        "         <br />\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                </div>\r\n                <br />\r\n                <br />\r\n       " +
+                        "         <br/>\r\n                "));
             global::System.Web.UI.WebControls.Label @__ctrl20;
             @__ctrl20 = this.@__BuildControllbl_currentaddr();
             @__parser.AddParsedSubObject(@__ctrl20);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                 <div style=\"float: right;width:400px\">\r\n                "));
             global::System.Web.UI.WebControls.TextBox @__ctrl21;
             @__ctrl21 = this.@__BuildControltxt_current();
             @__parser.AddParsedSubObject(@__ctrl21);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            </td>\r\n            <td>\r\n\r\n\r\n                <br />\r\n              " +
-                        "  "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                 </div>\r\n                <br />\r\n                <br />\r\n      " +
+                        "      </td>\r\n            <td>\r\n\r\n\r\n                <br />\r\n                "));
             global::System.Web.UI.WebControls.Label @__ctrl22;
             @__ctrl22 = this.@__BuildControllbl_mobno();
             @__parser.AddParsedSubObject(@__ctrl22);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp" +
-                        ";&nbsp;&nbsp;&nbsp;\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n              <div style=\"float: right;width:400px\">\r\n    "));
             global::System.Web.UI.WebControls.TextBox @__ctrl23;
             @__ctrl23 = this.@__BuildControltxt_mobno();
             @__parser.AddParsedSubObject(@__ctrl23);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                   </div>\r\n                <br />\r\n                <br />\r\n    " +
+                        "            "));
             global::System.Web.UI.WebControls.Label @__ctrl24;
             @__ctrl24 = this.@__BuildControllbl_emercontact();
             @__parser.AddParsedSubObject(@__ctrl24);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <div style=\"float: right;width:400px\">\r\n    "));
             global::System.Web.UI.WebControls.TextBox @__ctrl25;
             @__ctrl25 = this.@__BuildControltxt_emercontactno();
             @__parser.AddParsedSubObject(@__ctrl25);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                 </div>\r\n                <br />\r\n                <br />\r\n      " +
+                        "          "));
             global::System.Web.UI.WebControls.Label @__ctrl26;
             @__ctrl26 = this.@__BuildControllbl_residenceno();
             @__parser.AddParsedSubObject(@__ctrl26);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n   " +
-                        " "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                  <div style=\"float: right;width:400px\">\r\n    "));
             global::System.Web.UI.WebControls.TextBox @__ctrl27;
             @__ctrl27 = this.@__BuildControltxt_residenceno();
             @__parser.AddParsedSubObject(@__ctrl27);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                <br />\r\n\r\n\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                  </div>\r\n                <br />\r\n                <br />\r\n\r\n\r\n " +
+                        "               "));
             global::System.Web.UI.WebControls.Label @__ctrl28;
             @__ctrl28 = this.@__BuildControllbl_father();
             @__parser.AddParsedSubObject(@__ctrl28);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <div style=\"float: right;width:400px\">\r\n    "));
             global::System.Web.UI.WebControls.TextBox @__ctrl29;
             @__ctrl29 = this.@__BuildControltxt_father();
             @__parser.AddParsedSubObject(@__ctrl29);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />\r\n                &nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n               " +
-                        " <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n              </div>\r\n                <br />\r\n          \r\n                <br /" +
+                        ">\r\n                "));
             global::System.Web.UI.WebControls.Label @__ctrl30;
             @__ctrl30 = this.@__BuildControllbl_mothername();
             @__parser.AddParsedSubObject(@__ctrl30);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                   <div style=\"float: right;width:400px\">\r\n    "));
             global::System.Web.UI.WebControls.TextBox @__ctrl31;
             @__ctrl31 = this.@__BuildControltxt_mothernam();
             @__parser.AddParsedSubObject(@__ctrl31);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                       </div>\r\n                <br />\r\n                <br />\r\n" +
+                        "                "));
             global::System.Web.UI.WebControls.Label @__ctrl32;
             @__ctrl32 = this.@__BuildControllbl_maritalstatus();
             @__parser.AddParsedSubObject(@__ctrl32);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                  <div style=\"float: right;width:400px\">\r\n    "));
             global::System.Web.UI.WebControls.RadioButton @__ctrl33;
             @__ctrl33 = this.@__BuildControlrdbtn_single();
             @__parser.AddParsedSubObject(@__ctrl33);
@@ -3804,117 +3718,66 @@ namespace EmployeeCard.AddEmployeeCard {
             global::System.Web.UI.WebControls.RadioButton @__ctrl34;
             @__ctrl34 = this.@__BuildControlrdbtn_married();
             @__parser.AddParsedSubObject(@__ctrl34);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                    </div>\r\n                <br />\r\n                <br />\r\n   " +
+                        "             "));
             global::System.Web.UI.WebControls.Label @__ctrl35;
             @__ctrl35 = this.@__BuildControllbl_marriage();
             @__parser.AddParsedSubObject(@__ctrl35);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                   <div style=\"float: right;width:400px\">\r\n                "));
             global::Microsoft.SharePoint.WebControls.DateTimeControl @__ctrl36;
             @__ctrl36 = this.@__BuildControldtc_marriageanniversary();
             @__parser.AddParsedSubObject(@__ctrl36);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                    </div>\r\n                <br />\r\n                <br />\r\n   " +
+                        "             "));
             global::System.Web.UI.WebControls.Label @__ctrl37;
             @__ctrl37 = this.@__BuildControllbl_spousename();
             @__parser.AddParsedSubObject(@__ctrl37);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                   <div style=\"float: right;width:400px\">\r\n    "));
             global::System.Web.UI.WebControls.TextBox @__ctrl38;
             @__ctrl38 = this.@__BuildControltxt_spousename();
             @__parser.AddParsedSubObject(@__ctrl38);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                         </div>\r\n                <br />\r\n                <br />" +
+                        "\r\n                "));
             global::System.Web.UI.WebControls.Label @__ctrl39;
             @__ctrl39 = this.@__BuildControllbl_spousedob();
             @__parser.AddParsedSubObject(@__ctrl39);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n   " +
-                        "             "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                   <div style=\"float: right;width:400px\">\r\n                "));
             global::Microsoft.SharePoint.WebControls.DateTimeControl @__ctrl40;
             @__ctrl40 = this.@__BuildControldtcspouseDoB();
             @__parser.AddParsedSubObject(@__ctrl40);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                         </div>\r\n                <br />\r\n                <br />" +
+                        "\r\n                "));
             global::System.Web.UI.WebControls.Label @__ctrl41;
             @__ctrl41 = this.@__BuildControllbl_spousedesignation();
             @__parser.AddParsedSubObject(@__ctrl41);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                  <div style=\"float: right;width:400px\">\r\n    "));
             global::System.Web.UI.WebControls.TextBox @__ctrl42;
             @__ctrl42 = this.@__BuildControltxt_spousedesignation();
             @__parser.AddParsedSubObject(@__ctrl42);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                <br />\r\n                "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                        </div>\r\n                <br />\r\n                <br />\r" +
+                        "\n                "));
             global::System.Web.UI.WebControls.Label @__ctrl43;
             @__ctrl43 = this.@__BuildControllbl_spouseorganisation();
             @__parser.AddParsedSubObject(@__ctrl43);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                  <div style=\"float: right;width:400px\">\r\n    "));
             global::System.Web.UI.WebControls.TextBox @__ctrl44;
             @__ctrl44 = this.@__BuildControltxt_spouseorganisation();
             @__parser.AddParsedSubObject(@__ctrl44);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                <br />\r\n                <br />\r\n            </td>\r\n\r\n        </" +
-                        "tr>\r\n\r\n    </table>\r\n    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp" +
-                        ";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;\r\n    <br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp" +
-                        ";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n    <br" +
-                        " />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp" +
-                        ";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp" +
-                        ";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n    <br />\r\n    &nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp" +
-                        ";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb" +
-                        "sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp" +
-                        ";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&" +
-                        "nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n    &nbsp;&nbsp;<br />\r\n&nbsp;"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n                        </div>\r\n                <br />\r\n                <br />\r" +
+                        "\n            </td>\r\n\r\n        </tr>\r\n\r\n    </table>\r\n    \r\n    <br />\r\n\r\n    <br" +
+                        " />\r\n\r\n    <br />\r\n    <br />\r\n"));
             global::System.Web.UI.UpdatePanel @__ctrl45;
             @__ctrl45 = this.@__BuildControlUpdatePanel1();
             @__parser.AddParsedSubObject(@__ctrl45);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n   \r\n    <br />\r\n    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs" +
-                        "p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
-                        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n" +
-                        "bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />\r\n  " +
-                        "  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp" +
-                        ";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;\r\n    &nbsp;&nbsp;&nbsp;" +
-                        "\r\n    &nbsp;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
-                        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n" +
-                        "bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs" +
-                        "p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
-                        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n" +
-                        "bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs" +
-                        "p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
-                        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n" +
-                        "bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs" +
-                        "p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
-                        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n" +
-                        "bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs" +
-                        "p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
-                        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n   \r\n    <br />\r\n  <br />\r\n    <div>\r\n    "));
             global::System.Web.UI.WebControls.Button @__ctrl46;
             @__ctrl46 = this.@__BuildControlbtn_Save();
             @__parser.AddParsedSubObject(@__ctrl46);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n    &nbsp;&nbsp;\r\n    "));
-            global::System.Web.UI.WebControls.Button @__ctrl47;
-            @__ctrl47 = this.@__BuildControlbtn_cancel();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n   \r\n    <br />\r\n  "));
+            global::System.Web.UI.WebControls.Label @__ctrl47;
+            @__ctrl47 = this.@__BuildControllbl_alert();
             @__parser.AddParsedSubObject(@__ctrl47);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n    <br />\r\n    &nbsp;&nbsp;"));
-            global::System.Web.UI.WebControls.Label @__ctrl48;
-            @__ctrl48 = this.@__BuildControllbl_alert();
-            @__parser.AddParsedSubObject(@__ctrl48);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
-    <br />
-</div>
-<p>
-    &nbsp;
-</p>"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        </div>\r\n   <br />\r\n    <br />\r\n</div>\r\n<p>\r\n    &nbsp;\r\n</p>"));
         }
         
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +

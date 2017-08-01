@@ -5,6 +5,7 @@
       <SafeControls>
         <SafeControl Assembly="EmployeeCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9c4eb3fbf2b0fc9a" Namespace="EmployeeCard.VisualWebPart1" TypeName="*" />
         <SafeControl Assembly="EmployeeCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9c4eb3fbf2b0fc9a" Namespace="EmployeeCard.AddEmployeeCard" TypeName="*" />
+        <SafeControl Assembly="EmployeeCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9c4eb3fbf2b0fc9a" Namespace="EmployeeCard.EmployeeList" TypeName="*" />
       </SafeControls>
     </Assembly>
   </Assemblies>

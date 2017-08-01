@@ -57,22 +57,88 @@ namespace EmployeeCard.AddEmployeeCard
 
      
         protected void btn_Save_Click(object sender, EventArgs e)
-        {
-       
-         
+        {   
+            int flag=0;
+            SPWeb web = SPContext.Current.Web;
+            SPQuery PDquery = new SPQuery();
+            SPList PDlist = web.Lists["Personal Details"];
+            PDquery.Query = string.Concat("<Where><Eq><FieldRef Name='Employee_x0020_Id' /> <Value Type='Text'>", txt_id.Text, "</Value></Eq></Where>");
+            SPListItemCollection newitems = PDlist.GetItems(PDquery);
+            //  SPListItem items = PDlist.Items.Add();
+            foreach (SPListItem item in newitems)
+            {
 
+                string id = item["Employee Id"].ToString();
 
-            SavePersonalDetails();
-            SaveChildDetails();
-            SaveEducationQualif();
-            SaveCertifications();
-            SaveCareers();
-            SaveNeoExp();
-            SavePersonality();
+                if(string.Compare(id,txt_id.Text)==0)
+                 {
+                  flag=1;
+                 }
+            }
 
+            if (flag == 1)
+             {
+
+               lbl_alert.Text="The item already exist in the list";
+              
+             }
+            else
+            {
+                SavePersonalDetails();
+                SaveChildDetails();
+                SaveEducationQualif();
+                SaveCertifications();
+                SaveCareers();
+                SaveNeoExp();
+                SavePersonality();
+
+                lbl_alert.Text = "Saved Succefully";
+
+                ClearDetails();
+            }
 
 
        }
+
+        private void ClearDetails()
+        {
+            txt_id.Text = "";
+            txt_name.Text = "";
+    
+
+            dp_doj.SelectedDate = new DateTime();
+            txt_blood.Text = "";
+            dtcDoB.SelectedDate = new DateTime();
+            txt_pancard.Text = "";
+            txt_officialemail.Text = "";
+            txt_personalemail.Text = "";
+            txt_officialemail.Text = "";
+            txt_mobno.Text = "";
+            txt_permantaddr.Text = "";
+            txt_current.Text = "";
+            txt_emercontactno.Text = "";
+            txt_residenceno.Text = "";
+            txt_father.Text = "";
+            txt_mothernam.Text = "";
+            txt_residenceno.Text = "";
+          
+          //  rdbtn_single.Checked = "";
+           // rdbtn_married.Checked = "";
+           dtc_marriageanniversary.SelectedDate = new DateTime();
+            txt_spousename.Text = "";
+            dtcspouseDoB.SelectedDate = new DateTime();
+            txt_spousedesignation.Text = "";
+            txt_spouseorganisation.Text = "";
+
+
+            gv_child.Columns.Clear();
+            gv_education.Columns.Clear();
+            gv_certifications.Columns.Clear();
+            gv_careers.Columns.Clear();
+            gv_neoexp.Columns.Clear();
+            gv_strength.Columns.Clear();
+            
+        }
 
         private void SavePersonalDetails()
         {
@@ -118,6 +184,8 @@ namespace EmployeeCard.AddEmployeeCard
 
         }
 
+
+      
         private void SavePersonality()
         {
             SPWeb web = SPContext.Current.Web;
@@ -273,34 +341,7 @@ namespace EmployeeCard.AddEmployeeCard
            
         }
 
-        protected void btn_cancel_Click(object sender, EventArgs e)
-        {
-            txt_id.Text = string.Empty;
-            txt_name.Text = string.Empty;
-
-            //  dp_doj.SelectedDate = dp_doj.
-            txt_blood.Text = string.Empty;
-            // dtcDoB.SelectedDate = string.Empty;
-            txt_pancard.Text = string.Empty;
-            txt_officialemail.Text = string.Empty;
-            txt_personalemail.Text = string.Empty;
-            txt_mobno.Text = string.Empty;
-            txt_permantaddr.Text = string.Empty;
-            txt_current.Text = string.Empty;
-            txt_emercontactno.Text = string.Empty;
-            txt_residenceno.Text = string.Empty;
-            txt_father.Text = string.Empty;
-            txt_mothernam.Text = string.Empty;
-            //     rdbtn_single.Checked == string.Empty;
-
-
-            //  dtc_marriageanniversary.SelectedDate = string.Empty; ;
-            txt_spousename.Text = string.Empty; ;
-            //   dtcspouseDoB.SelectedDate = string.Empty; ;
-            txt_spousedesignation.Text = string.Empty; ;
-            txt_spousedesignation.Text = string.Empty; 
-        }
-
+       
         private void SetInitialRow()
         {
 
@@ -319,6 +360,7 @@ namespace EmployeeCard.AddEmployeeCard
 
             ViewState["dtSource1"] = dtSource1;
 
+            
             gv_child.DataSource = dtSource1;
             gv_child.DataBind();
 
@@ -340,7 +382,7 @@ namespace EmployeeCard.AddEmployeeCard
              
              gv_child.DataBind();
 
-             clear();
+            clear();
         
         }
 
@@ -352,11 +394,7 @@ namespace EmployeeCard.AddEmployeeCard
         }
 
 
-        protected void gv_child_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          
-        }
-
+    
         protected void gv_child_RowCancelingEdit(object sender, System.Web.UI.WebControls.GridViewCancelEditEventArgs e)
         {
 
@@ -527,11 +565,7 @@ namespace EmployeeCard.AddEmployeeCard
 
        
 
-        protected void gv_child_SelectedIndexChanged1(object sender, EventArgs e)
-        {
-          
-        }
-       
+     
 
 
      private void CertificationGv()
@@ -946,7 +980,7 @@ namespace EmployeeCard.AddEmployeeCard
             txt_weak.Text = "";
         }
 
-    
+     
 
       
        
