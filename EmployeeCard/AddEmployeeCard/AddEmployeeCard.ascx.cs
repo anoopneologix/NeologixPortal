@@ -44,7 +44,7 @@ namespace EmployeeCard.AddEmployeeCard
             
                  if (!Page.IsPostBack)
                    {
-                         SetInitialRow();
+                        SetInitialRow();
                          EducationGv();
                          CertificationGv();
                          CareerGv();
@@ -241,7 +241,7 @@ namespace EmployeeCard.AddEmployeeCard
             SPListItemCollection critems = CRlist.Items;
             SPListItem item5 = CRlist.Items.Add();
             for (int i = 0; i < gv_careers.Rows.Count; i++)
-            {
+              {
                 item5["Employee Id"] = txt_id.Text;
                 GridViewRow row = gv_careers.Rows[i];
                 item5["Designation"] = row.Cells[1].Text;
@@ -264,7 +264,7 @@ namespace EmployeeCard.AddEmployeeCard
                 item5["Technical Skill"] = row.Cells[5].Text;
                 item5["Final salary"] = row.Cells[6].Text;
 
-             }
+               }
             item5.Update();
          }
 
@@ -341,7 +341,7 @@ namespace EmployeeCard.AddEmployeeCard
            
         }
 
-       
+
         private void SetInitialRow()
         {
 
@@ -349,18 +349,18 @@ namespace EmployeeCard.AddEmployeeCard
             SPList CDlist = web.Lists["Employee Child Details"];
 
             DataTable dtSource1 = new DataTable();
-         
-           // DataRow dr = dtSource.NewRow();
-           //   DataRow dr =null;
+
+            // DataRow dr = dtSource.NewRow();
+            //   DataRow dr =null;
             dtSource1.Columns.Add("ID");
             dtSource1.Columns.Add("Child Name");
             dtSource1.Columns.Add("Child Age");
 
-           //   dtSource.Rows.Add(dr);
+            //   dtSource.Rows.Add(dr);
 
             ViewState["dtSource1"] = dtSource1;
 
-            
+
             gv_child.DataSource = dtSource1;
             gv_child.DataBind();
 

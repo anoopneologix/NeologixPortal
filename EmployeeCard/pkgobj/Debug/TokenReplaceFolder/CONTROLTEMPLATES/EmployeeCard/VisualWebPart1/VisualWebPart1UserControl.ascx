@@ -10,7 +10,6 @@
 
 <div>
   
-    <asp:Button ID="btn_Save" runat="server" Text="Save" OnClick="btn_Save_Click" style="margin-left: 162px" />
     <br />
     <br />
   <div style="text-align:center;width:800px">
@@ -176,189 +175,332 @@
     <br />
 
     <br />
-       <div  style="text-align:center;width:800px" >
-    <asp:Label runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Larger" Text="Employee Child Details" ID="ctl12"></asp:Label>
-           </div>
+
+      <br />
     <br />
-  
-    <br />
+<asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+        <ContentTemplate>
+        
+            <div  style="text-align:center;width:800px" >
+            <asp:Label ID="ctl12" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Larger" Text="Employee Child Details" ></asp:Label>
+             </div>
+            <br />
+            <br />
+              <div >
+            <asp:Label ID="lbl_chd" runat="server" Text="Child Name"  Width="164px" ></asp:Label>
+        
+          
+            <asp:Label ID="lbl_age" runat="server" Text="Child Age" Width="164px" ></asp:Label>
+            </div> 
+            <br />
+           <div>
+            <asp:TextBox ID="txt_chdname" runat="server"></asp:TextBox>
+           
+          
+          <asp:TextBox ID="txt_chdage" runat="server" ></asp:TextBox>
+         
+
+            <asp:Button ID="btn_add" runat="server" OnClick="btn_add_Click" Text="Add"  />
+                 </div>
+            <br />
+            <br />
+            <asp:GridView ID="gv_child" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="gv_child_RowCancelingEdit" OnRowDeleting="gv_child_RowDeleting" OnRowEditing="gv_child_RowEditing" OnRowUpdating="gv_child_RowUpdating" Width="961px">
+                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                <Columns>
+                    <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
+                    <asp:BoundField DataField="Child Name" HeaderText="Child Name" />
+                    <asp:BoundField DataField="Child Age" HeaderText="Child Age" />
+                    <asp:CommandField ItemStyle-ForeColor="Red" ShowEditButton="True" />
+                    <asp:CommandField ItemStyle-ForeColor="Red" ShowDeleteButton="True" />
+                </Columns>
+                <EditRowStyle BackColor="#999999" />
+                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+            </asp:GridView>
+            <br />
+     
+            <br />
+            <br />
+        
+            <br />
+                  <div  style="text-align:center;width:800px" >
+            <asp:Label ID="lbl_education" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Larger" Text="Educational Qualification"></asp:Label>
+                  </div>
+           
+            <br />
+            <br />
+            
+             <div >
+            <asp:Label ID="lbl_qualif" runat="server" Text="Qualification" Width="164px" ></asp:Label>
+           
+            <asp:Label ID="lbl_schl" runat="server" Text="School/College" Width="164px" ></asp:Label>
+              
+           <asp:Label ID="lbl_uni" runat="server" Text="University" Width="166px" ></asp:Label>
+         
+         
+            <asp:Label ID="lbl_yp" runat="server" Text="Year Of Passing" Width="168px"></asp:Label>
+            
+            
+            <asp:Label ID="lbl_marks" runat="server" Text="Marks" Width="170px"></asp:Label>
+             </div>  
+            <br />
+            <div>
+            <asp:TextBox ID="txt_quali" runat="server"></asp:TextBox>
+         
+            <asp:TextBox ID="txt_school" runat="server"></asp:TextBox>
+       
+            <asp:TextBox ID="txt_uni" runat="server"></asp:TextBox>
+        
+            <asp:TextBox ID="txt_yop" runat="server"></asp:TextBox>
+         
+            <asp:TextBox ID="txt_marks" runat="server"></asp:TextBox>
+        
+            <asp:Button ID="btn_addedu" runat="server"  Text="Add" OnClick="btn_addedu_Click1" />
+                </div>
+            <br />
+            <asp:GridView ID="gv_education" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="gv_education_RowCancelingEdit" OnRowDeleting="gv_education_RowDeleting" OnRowEditing="gv_education_RowEditing" OnRowUpdating="gv_education_RowUpdating" Width="961px">
+                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                <Columns>
+                    <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
+                    <asp:BoundField DataField="Qualification" HeaderText="Qualification" />
+                    <asp:BoundField DataField="School/College" HeaderText="School/College" />
+                    <asp:BoundField DataField="University" HeaderText="University" />
+                    <asp:BoundField DataField="Year Of Passing" HeaderText="Year Of Passing" />
+                    <asp:BoundField DataField="Marks" HeaderText="Marks" />
+                    <asp:CommandField ItemStyle-ForeColor="Red" ShowEditButton="True" />
+                    <asp:CommandField ItemStyle-ForeColor="Red" ShowDeleteButton="True" />
+                </Columns>
+                <EditRowStyle BackColor="#999999" />
+                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+            </asp:GridView>
+            <br />
+            <br />
+         <div  style="text-align:center;width:800px" >
+            <asp:Label ID="lbl_certification" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Larger" Text="Certifications"></asp:Label>
+             </div>
+            <br />
+            <br />
+            <div>
+            <asp:Label ID="Label2" runat="server" Text="Name"  Width="163px"></asp:Label>
+        
+            <asp:Label ID="lbl_from" runat="server" Text="Validity From"  Width="164px"></asp:Label>
+           
+            <asp:Label ID="lbl_valto" runat="server" Text="Validity To"  Width="164px"></asp:Label>
+                </div>
+            <br />
+            <div>
+            <asp:TextBox ID="txt_certname" runat="server"></asp:TextBox>
+          
+            <asp:TextBox ID="txt_valfrom" runat="server"></asp:TextBox>
+           
+            <asp:TextBox ID="txt_valto" runat="server"></asp:TextBox>
+           
+            <asp:Button ID="btn_certadd" runat="server" OnClick="btn_certadd_Click1" Text="Add" />
+                </div>
+            <br />
+            <br />
+            <asp:GridView ID="gv_certifications" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="gv_certifications_RowCancelingEdit" OnRowDeleting="gv_certifications_RowDeleting" OnRowEditing="gv_certifications_RowEditing" OnRowUpdating="gv_certifications_RowUpdating" Width="961px">
+                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                <Columns>
+                    <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
+                    <asp:BoundField DataField="Name" HeaderText="Name" />
+                    <asp:BoundField DataField="Validity From" Dataformatstring="{0:d}" HeaderText="Validity From" />
+                    <asp:BoundField DataField="Validity To" Dataformatstring="{0:d}" HeaderText="Validity To" />
+                    <asp:CommandField ItemStyle-ForeColor="Red" ShowEditButton="True" />
+                    <asp:CommandField ItemStyle-ForeColor="Red" ShowDeleteButton="True" />
+                </Columns>
+                <EditRowStyle BackColor="#999999" />
+                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+            </asp:GridView>
+            <br />
+            <div  style="text-align:center;width:800px" >
+            <asp:Label ID="lbl_careers" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Larger" Text="Careers"></asp:Label>
+               </div>
+            <br />
+            <br />
+            <div>
+            <asp:Label ID="lbl_desig" runat="server" Text="Designation" Width="163px"></asp:Label>
+         
+            <asp:Label ID="lbl_company" runat="server" Text="Company" Width="163px"></asp:Label>
+           <asp:Label ID="lbl_Tenurefrom" runat="server" Text="Tenure From" Width="163px"></asp:Label>
+         
+            <asp:Label ID="lbl_tenureto" runat="server" Text="Tenure To" Width="163px"></asp:Label>
+         
+            <asp:Label ID="lbl_tech" runat="server" Text="Technical Skill" Width="163px"></asp:Label>
+           
+            <asp:Label ID="lbl_fnlsal" runat="server" Text="Final Salary" Width="163px"></asp:Label>
+                </div>
+            <br />
+            <div>
+            <asp:TextBox ID="txt_desg" runat="server"></asp:TextBox>
+           
+            <asp:TextBox ID="txt_comp" runat="server"></asp:TextBox>
+           <asp:TextBox ID="txt_tenurefrom" runat="server"></asp:TextBox>
+           <asp:TextBox ID="txt_tenureto" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txt_skill" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txt_sal" runat="server"></asp:TextBox>
+            <asp:Button ID="btn_careeradd" runat="server" OnClick="btn_careeradd_Click" Text="Add" />
+                </div>
+            <asp:GridView ID="gv_careers" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="gv_careers_RowCancelingEdit" OnRowDeleting="gv_careers_RowDeleting" OnRowEditing="gv_careers_RowEditing" OnRowUpdating="gv_careers_RowUpdating" Width="961px">
+                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                <Columns>
+                    <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
+                    <asp:BoundField DataField="Designation" HeaderText="Designation" />
+                    <asp:BoundField DataField="Company" HeaderText="Company" />
+                    <asp:BoundField DataField="Tenure From" DataFormatString="{0:MM/dd/yyyy}" HeaderText="Tenure From" />
+                    <asp:BoundField DataField="Tenure To" DataFormatString="{0:MM/dd/yyyy}" HeaderText="Tenure To" />
+                    <asp:BoundField DataField="Technical Skill" HeaderText="Technical Skill" />
+                    <asp:BoundField DataField="Final salary" HeaderText="Final salary" />
+                    <asp:CommandField ItemStyle-ForeColor="Red" ShowEditButton="True" />
+                    <asp:CommandField ItemStyle-ForeColor="Red" ShowDeleteButton="True" />
+                </Columns>
+                <EditRowStyle BackColor="#999999" />
+                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+            </asp:GridView>
+            <br />
+            <br />
+            <br />
+         
+            <br />
+            <br />
+              <div  style="text-align:center;width:800px" >
+            <asp:Label ID="lbl_neoexp" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Larger" Text="Neo Experience"></asp:Label>
+
+              </div>
+            <br />
+            <br />
+            <div>
+            <asp:Label ID="lbl_neodesg" runat="server" Text="Designation" Width="163px"></asp:Label>
+         
+            <asp:Label ID="lbl_neofrom" runat="server" Text="From" Width="163px"></asp:Label>
+          
+            <asp:Label ID="lbl_neoto" runat="server" Text="To" Width="163px"></asp:Label>
+           
+            <asp:Label ID="lbl_RO" runat="server" Text="Reporting Officer" Width="163px"></asp:Label>
+                </div>
+           
+            <br />
+            <div>
+            <asp:TextBox ID="txt_neodesg" runat="server"></asp:TextBox>
+           <asp:TextBox ID="txt_neofrom" runat="server"></asp:TextBox>
+           <asp:TextBox ID="txt_neoto" runat="server"></asp:TextBox>
+           <asp:TextBox ID="txt_neoRo" runat="server"></asp:TextBox>
+            
+            <asp:Button ID="btn_neoadd" runat="server" OnClick="btn_neoadd_Click1" Text="Add" />
+                </div>
+            <br />
+            <asp:GridView ID="gv_neoexp" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="gv_neoexp_RowCancelingEdit" OnRowDeleting="gv_neoexp_RowDeleting" OnRowEditing="gv_neoexp_RowEditing" OnRowUpdating="gv_neoexp_RowUpdating" Width="961px">
+                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                <Columns>
+                    <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
+                    <asp:BoundField DataField="Designation" HeaderText="Designation" />
+                    <asp:BoundField DataField="From" HeaderText="From" />
+                    <asp:BoundField DataField="To" HeaderText="To" />
+                    <asp:BoundField DataField="Reporting Officer" HeaderText="Reporting Officer" />
+                    <asp:CommandField ItemStyle-ForeColor="Red" ShowEditButton="True" />
+                    <asp:CommandField ItemStyle-ForeColor="Red" ShowDeleteButton="True" />
+                </Columns>
+                <EditRowStyle BackColor="#999999" />
+                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+            </asp:GridView>
+            <br />
+            <br />
+            <br />
+           <div  style="text-align:center;width:800px" >
+            <asp:Label ID="lbl_streweak" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Larger" Text="Strengths And Weakness"></asp:Label>
+               </div>
+            <br />
+            <br />
+            <div>
+            <asp:Label ID="lbl_stren" runat="server" Text="Strength" Width="163px"></asp:Label>
+       
+            <asp:Label ID="lbl_weak" runat="server" Text="Weakness" Width="163px"></asp:Label>
+                </div>
+            <br />
+            <div>
+            <asp:TextBox ID="txt_stren" runat="server"></asp:TextBox>
+          <asp:TextBox ID="txt_weak" runat="server"></asp:TextBox>
+          
+            <asp:Button ID="btn_stenadd" runat="server" OnClick="btn_stenadd_Click" Text="Add" />
+                </div>
+            <asp:GridView ID="gv_strength" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="gv_strength_RowCancelingEdit" OnRowDeleting="gv_strength_RowDeleting" OnRowEditing="gv_strength_RowEditing" OnRowUpdating="gv_strength_RowUpdating" Width="961px">
+                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                <Columns>
+                    <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
+                    <asp:BoundField DataField="Strength" HeaderText="Strength" />
+                    <asp:BoundField DataField="Weakness" HeaderText="Weakness" />
+                    <asp:CommandField ItemStyle-ForeColor="Red" ShowEditButton="True" />
+                    <asp:CommandField ItemStyle-ForeColor="Red" ShowDeleteButton="True" />
+                </Columns>
+                <EditRowStyle BackColor="#999999" />
+                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+            </asp:GridView>
+            <br />
+            <br />
+            <br />
+            <br />
+          <br />
+        </ContentTemplate>
+    </asp:UpdatePanel>
    
     <br />
-  
-     <asp:GridView ID="gv_child" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="961px" AutoGenerateColumns="False" DataKeyNames="ID" OnRowCancelingEdit="gv_child_RowCancelingEdit" OnRowDeleting="gv_child_RowDeleting" OnRowEditing="gv_child_RowEditing" OnRowUpdating="gv_child_RowUpdating" >
-       
-        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-         <Columns>
-             <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
-             <asp:BoundField DataField="Child Name" HeaderText="Child Name" />
-             <asp:BoundField DataField="Child Age" HeaderText="Child Age" />
-             <asp:CommandField ShowEditButton="True"   ItemStyle-ForeColor="Red" />
-             <asp:CommandField ShowDeleteButton="True"   ItemStyle-ForeColor="Red" />
-         </Columns>
-        <EditRowStyle BackColor="#FF0000" />
-        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-        <SortedAscendingCellStyle BackColor="#E9E7E2" />
-        <SortedAscendingHeaderStyle BackColor="#506C8C" />
-        <SortedDescendingCellStyle BackColor="#FFFDF8" />
-        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-    </asp:GridView>
+  <br />
+    <div>
+    <asp:Button ID="btn_Save" runat="server" OnClick="btn_Save_Click" Text="Save" />
+   
     <br />
-    <br />
- <div  style="text-align:center;width:800px" >
-    <asp:Label ID="lbl_education" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Larger" Text="Educational Qualification"></asp:Label>
-      </div>
-    <br />
-    <br />
-    <br />
-    &nbsp;<asp:GridView ID="gv_education" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="976px" AutoGenerateColumns="False" OnRowCancelingEdit="gv_education_RowCancelingEdit" OnRowDeleting="gv_education_RowDeleting" OnRowEditing="gv_education_RowEditing" OnRowUpdating="gv_education_RowUpdating" DataKeyNames="ID" OnSelectedIndexChanged="gv_education_SelectedIndexChanged">
-        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-        <Columns>
-            <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
-            <asp:BoundField DataField="Qualification" HeaderText="Qualification" />
-            <asp:BoundField DataField="School/College" HeaderText="School/College" />
-            <asp:BoundField DataField="University" HeaderText="University" />
-<asp:BoundField DataField="Year Of Passing" HeaderText="Year Of Passing"></asp:BoundField>
-            <asp:BoundField DataField="Marks" HeaderText="Marks" />
-            <asp:CommandField ShowEditButton="True"  ItemStyle-ForeColor="Red"/>
-            <asp:CommandField ShowDeleteButton="True" ItemStyle-ForeColor="Red"/>
-        </Columns>
-        <EditRowStyle BackColor="#999999" />
-        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-        <SortedAscendingCellStyle BackColor="#E9E7E2" />
-        <SortedAscendingHeaderStyle BackColor="#506C8C" />
-        <SortedDescendingCellStyle BackColor="#FFFDF8" />
-        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-    </asp:GridView>
-    <br />
-    <br />
- <div  style="text-align:center;width:800px" >
-    <asp:Label ID="lbl_certification" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Larger" Text="Certifications"></asp:Label>
-      </div>
-    <br />
-    <br />
-    <br />
+  <asp:Label ID="lbl_alert" runat="server" Text="Alert"></asp:Label>
+        </div>
    <br />
-    <asp:GridView ID="gv_certifications" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="982px" AutoGenerateColumns="False" DataKeyNames="ID" OnRowCancelingEdit="gv_certifications_RowCancelingEdit" OnRowDeleting="gv_certifications_RowDeleting" OnRowEditing="gv_certifications_RowEditing" OnRowUpdating="gv_certifications_RowUpdating">
-        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-        <Columns>
-            <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
-            <asp:BoundField DataField="Name" HeaderText="Name" />
-            <asp:BoundField DataField="Validity From" HeaderText="Validity From" Dataformatstring="{0:d}"/>
-            <asp:BoundField DataField="Validity To" HeaderText="Validity To"  Dataformatstring="{0:d}" />
-            <asp:CommandField ShowEditButton="True" ItemStyle-ForeColor="Red"/>
-            <asp:CommandField ShowDeleteButton="True"  ItemStyle-ForeColor="Red"/>
-        </Columns>
-        <EditRowStyle BackColor="#999999" />
-        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-        <SortedAscendingCellStyle BackColor="#E9E7E2" />
-        <SortedAscendingHeaderStyle BackColor="#506C8C" />
-        <SortedDescendingCellStyle BackColor="#FFFDF8" />
-        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-    </asp:GridView>
-    <br />
-     <div  style="text-align:center;width:800px" >
-    <asp:Label ID="lbl_careers" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Larger" Text="Careers"></asp:Label>
-          </div>
-    <br />
-    <br />
-    <br />
-  
-    <asp:GridView ID="gv_careers" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="986px" AutoGenerateColumns="False" DataKeyNames="ID" OnRowCancelingEdit="gv_careers_RowCancelingEdit" OnRowDeleting="gv_careers_RowDeleting" OnRowEditing="gv_careers_RowEditing" OnRowUpdating="gv_careers_RowUpdating">
-        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-        <Columns>
-            <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
-            <asp:BoundField DataField="Designation" HeaderText="Designation" />
-            <asp:BoundField DataField="Company" HeaderText="Company" />
-            <asp:BoundField DataField="Tenure From" HeaderText="Tenure From"  DataFormatString="{0:MM/dd/yyyy}"/>
-            <asp:BoundField DataField="Tenure To" HeaderText="Tenure To"  DataFormatString="{0:MM/dd/yyyy}"/>
-            <asp:BoundField DataField="Technical Skill" HeaderText="Technical Skill" />
-            <asp:BoundField DataField="Final salary" HeaderText="Final salary" />
-            <asp:CommandField ShowEditButton="True"  ItemStyle-ForeColor="Red"/>
-            <asp:CommandField ShowDeleteButton="True"  ItemStyle-ForeColor="Red"/>
-        </Columns>
-        <EditRowStyle BackColor="#999999" />
-        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-        <SortedAscendingCellStyle BackColor="#E9E7E2" />
-        <SortedAscendingHeaderStyle BackColor="#506C8C" />
-        <SortedDescendingCellStyle BackColor="#FFFDF8" />
-        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-    </asp:GridView>
-    <br />
- <div  style="text-align:center;width:800px" >
-    <asp:Label ID="lbl_neoexp" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Larger" Text="Neo Experience"></asp:Label>
-      </div>
-    <br />
-    <br />
-    <asp:GridView ID="gv_neoexp" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" ForeColor="#333333" GridLines="None" Width="985px">
-        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-        <Columns>
-            <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
-            <asp:BoundField DataField="Designation" HeaderText="Designation" />
-            <asp:BoundField DataField="From" HeaderText="From"/>
-            <asp:BoundField DataField="To" HeaderText="To" />
-            <asp:BoundField DataField="Reporting Officer" HeaderText="Reporting Officer" />
-            <asp:CommandField ShowEditButton="True" ItemStyle-ForeColor="Red"/>
-            <asp:CommandField ShowDeleteButton="True" ItemStyle-ForeColor="Red"/>
-        </Columns>
-        <EditRowStyle BackColor="#999999" />
-        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-        <SortedAscendingCellStyle BackColor="#E9E7E2" />
-        <SortedAscendingHeaderStyle BackColor="#506C8C" />
-        <SortedDescendingCellStyle BackColor="#FFFDF8" />
-        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-    </asp:GridView>
-    <br />
-   <br />
-    <br />
-      <div  style="text-align:center;width:800px" >
-          <asp:Label ID="lbl_streweak" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Larger" Text="Strengths And Weakness"></asp:Label>
-      </div>
-    <br />
-    <br />
-    <asp:GridView ID="gv_strength" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="992px" AutoGenerateColumns="False" DataKeyNames="ID" OnRowCancelingEdit="gv_strength_RowCancelingEdit" OnRowDeleting="gv_strength_RowDeleting" OnRowEditing="gv_strength_RowEditing" OnRowUpdating="gv_strength_RowUpdating">
-        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-        <Columns>
-            <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
-            <asp:BoundField DataField="Strength" HeaderText="Strength" />
-            <asp:BoundField DataField="Weakness" HeaderText="Weakness" />
-            <asp:CommandField ShowEditButton="True"  ItemStyle-ForeColor="Red"/>
-            <asp:CommandField ShowDeleteButton="True" ItemStyle-ForeColor="Red"/>
-        </Columns>
-        <EditRowStyle BackColor="#999999" />
-        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-        <SortedAscendingCellStyle BackColor="#E9E7E2" />
-        <SortedAscendingHeaderStyle BackColor="#506C8C" />
-        <SortedDescendingCellStyle BackColor="#FFFDF8" />
-        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-    </asp:GridView>
-    <br />
     <br />
 </div>
 <p>
     &nbsp;
 </p>
-

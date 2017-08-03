@@ -58,7 +58,7 @@ namespace EmployeeCard.EmployeeList {
         <table  border=""1"">
             <tr>
                 <th scope=""col"" style=""width: 80px"">
-                    Employee Id
+                   Employee Id
                 </th>
                 <th scope=""col"" style=""width: 120px"">
                      Name
@@ -71,26 +71,26 @@ namespace EmployeeCard.EmployeeList {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "12.0.0.0")]
-        private global::System.Web.UI.WebControls.Label @__BuildControl__control4() {
-            global::System.Web.UI.WebControls.Label @__ctrl;
-            @__ctrl = new global::System.Web.UI.WebControls.Label();
+        private global::System.Web.UI.DataBoundLiteralControl @__BuildControl__control4() {
+            global::System.Web.UI.DataBoundLiteralControl @__ctrl;
+            @__ctrl = new global::System.Web.UI.DataBoundLiteralControl(2, 1);
             @__ctrl.TemplateControl = this;
-            @__ctrl.ApplyStyleSheetSkin(this.Page);
-            @__ctrl.ID = "lblEmployeeId";
-            @__ctrl.DataBinding += new System.EventHandler(this.@__DataBinding__control4);
+            @__ctrl.SetStaticString(0, "\r\n       \r\n      <tr>\r\n         <td> \r\n               <a href=\'/HR/sitepages/Empl" +
+                    "oyee%20Card.aspx?empid=");
+            @__ctrl.SetStaticString(1, "\'>  ");
+            @__ctrl.DataBinding += new System.EventHandler(this.@__DataBind__control4);
             return @__ctrl;
         }
         
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "12.0.0.0")]
-        public void @__DataBinding__control4(object sender, System.EventArgs e) {
-            System.Web.UI.WebControls.Label dataBindingExpressionBuilderTarget;
+        public void @__DataBind__control4(object sender, System.EventArgs e) {
             System.Web.UI.WebControls.RepeaterItem Container;
-            dataBindingExpressionBuilderTarget = ((System.Web.UI.WebControls.Label)(sender));
-            Container = ((System.Web.UI.WebControls.RepeaterItem)(dataBindingExpressionBuilderTarget.BindingContainer));
-            dataBindingExpressionBuilderTarget.Text = global::System.Convert.ToString( 
-Eval("Employee_x0020_Id") , global::System.Globalization.CultureInfo.CurrentCulture);
+            System.Web.UI.DataBoundLiteralControl target;
+            target = ((System.Web.UI.DataBoundLiteralControl)(sender));
+            Container = ((System.Web.UI.WebControls.RepeaterItem)(target.BindingContainer));
+            target.SetDataBoundString(0, global::System.Convert.ToString(Eval("Employee_x0020_Id"), global::System.Globalization.CultureInfo.CurrentCulture));
         }
         
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -101,7 +101,7 @@ Eval("Employee_x0020_Id") , global::System.Globalization.CultureInfo.CurrentCult
             @__ctrl = new global::System.Web.UI.WebControls.Label();
             @__ctrl.TemplateControl = this;
             @__ctrl.ApplyStyleSheetSkin(this.Page);
-            @__ctrl.ID = "lblName";
+            @__ctrl.ID = "lblEmployeeId";
             @__ctrl.DataBinding += new System.EventHandler(this.@__DataBinding__control5);
             return @__ctrl;
         }
@@ -114,31 +114,82 @@ Eval("Employee_x0020_Id") , global::System.Globalization.CultureInfo.CurrentCult
             System.Web.UI.WebControls.RepeaterItem Container;
             dataBindingExpressionBuilderTarget = ((System.Web.UI.WebControls.Label)(sender));
             Container = ((System.Web.UI.WebControls.RepeaterItem)(dataBindingExpressionBuilderTarget.BindingContainer));
-            dataBindingExpressionBuilderTarget.Text = global::System.Convert.ToString( Eval
-("Name") , global::System.Globalization.CultureInfo.CurrentCulture);
+            dataBindingExpressionBuilderTarget.Text = global::System.Convert.ToString( Eval("Employee_x0020_Id") , global::System.Globalization.CultureInfo.CurrentCulture);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
+        private global::System.Web.UI.DataBoundLiteralControl @__BuildControl__control6() {
+            global::System.Web.UI.DataBoundLiteralControl @__ctrl;
+            @__ctrl = new global::System.Web.UI.DataBoundLiteralControl(2, 1);
+            @__ctrl.TemplateControl = this;
+            @__ctrl.SetStaticString(0, "\r\n           </a>\r\n            </td>\r\n               \r\n            <td>\r\n        " +
+                    "        <a href=\'/HR/sitepages/Employee%20Card.aspx?empid=");
+            @__ctrl.SetStaticString(1, "\'>  ");
+            @__ctrl.DataBinding += new System.EventHandler(this.@__DataBind__control6);
+            return @__ctrl;
+        }
+        
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
+        public void @__DataBind__control6(object sender, System.EventArgs e) {
+            System.Web.UI.WebControls.RepeaterItem Container;
+            System.Web.UI.DataBoundLiteralControl target;
+            target = ((System.Web.UI.DataBoundLiteralControl)(sender));
+            Container = ((System.Web.UI.WebControls.RepeaterItem)(target.BindingContainer));
+            target.SetDataBoundString(0, global::System.Convert.ToString(Eval("Employee_x0020_Id"), global::System.Globalization.CultureInfo.CurrentCulture));
+        }
+        
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
+        private global::System.Web.UI.WebControls.Label @__BuildControl__control7() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            @__ctrl.TemplateControl = this;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            @__ctrl.ID = "lblName";
+            @__ctrl.DataBinding += new System.EventHandler(this.@__DataBinding__control7);
+            return @__ctrl;
+        }
+        
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "12.0.0.0")]
+        public void @__DataBinding__control7(object sender, System.EventArgs e) {
+            System.Web.UI.WebControls.Label dataBindingExpressionBuilderTarget;
+            System.Web.UI.WebControls.RepeaterItem Container;
+            dataBindingExpressionBuilderTarget = ((System.Web.UI.WebControls.Label)(sender));
+            Container = ((System.Web.UI.WebControls.RepeaterItem)(dataBindingExpressionBuilderTarget.BindingContainer));
+            dataBindingExpressionBuilderTarget.Text = global::System.Convert.ToString( Eval("Name") , global::System.Globalization.CultureInfo.CurrentCulture);
         }
         
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "12.0.0.0")]
         private void @__BuildControl__control3(System.Web.UI.Control @__ctrl) {
-            System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n       \r\n        <tr>\r\n            <td> \r\n                "));
-            global::System.Web.UI.WebControls.Label @__ctrl1;
+            global::System.Web.UI.DataBoundLiteralControl @__ctrl1;
             @__ctrl1 = this.@__BuildControl__control4();
+            System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
             @__parser.AddParsedSubObject(@__ctrl1);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n           \r\n            </td>\r\n               \r\n            <td>\r\n            " +
-                        "     "));
             global::System.Web.UI.WebControls.Label @__ctrl2;
             @__ctrl2 = this.@__BuildControl__control5();
             @__parser.AddParsedSubObject(@__ctrl2);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n\r\n            </td>\r\n      </tr>\r\n      \r\n    "));
+            global::System.Web.UI.DataBoundLiteralControl @__ctrl3;
+            @__ctrl3 = this.@__BuildControl__control6();
+            @__parser.AddParsedSubObject(@__ctrl3);
+            global::System.Web.UI.WebControls.Label @__ctrl4;
+            @__ctrl4 = this.@__BuildControl__control7();
+            @__parser.AddParsedSubObject(@__ctrl4);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(" </a>\r\n            </td>\r\n      </tr>\r\n      \r\n    "));
         }
         
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "12.0.0.0")]
-        private void @__BuildControl__control6(System.Web.UI.Control @__ctrl) {
+        private void @__BuildControl__control8(System.Web.UI.Control @__ctrl) {
             System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
             @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        </table>\r\n    "));
         }
@@ -152,7 +203,7 @@ Eval("Employee_x0020_Id") , global::System.Globalization.CultureInfo.CurrentCult
             this.rptEmployees = @__ctrl;
             @__ctrl.HeaderTemplate = new System.Web.UI.CompiledTemplateBuilder(new System.Web.UI.BuildTemplateMethod(this.@__BuildControl__control2));
             @__ctrl.ItemTemplate = new System.Web.UI.CompiledTemplateBuilder(new System.Web.UI.BuildTemplateMethod(this.@__BuildControl__control3));
-            @__ctrl.FooterTemplate = new System.Web.UI.CompiledTemplateBuilder(new System.Web.UI.BuildTemplateMethod(this.@__BuildControl__control6));
+            @__ctrl.FooterTemplate = new System.Web.UI.CompiledTemplateBuilder(new System.Web.UI.BuildTemplateMethod(this.@__BuildControl__control8));
             @__ctrl.ID = "rptEmployees";
             return @__ctrl;
         }

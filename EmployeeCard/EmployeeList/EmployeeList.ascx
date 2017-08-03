@@ -11,7 +11,7 @@
         <table <%--cellspacing="0" rules="all"--%> border="1">
             <tr>
                 <th scope="col" style="width: 80px">
-                    Employee Id
+                   Employee Id
                 </th>
                 <th scope="col" style="width: 120px">
                      Name
@@ -21,17 +21,14 @@
     </HeaderTemplate>
     <ItemTemplate>
        
-        <tr>
-            <td> 
-                <asp:Label ID="lblEmployeeId" runat="server" Text='<%# 
-Eval("Employee_x0020_Id") %>' />
-           
+      <tr>
+         <td> 
+               <a href='/HR/sitepages/Employee%20Card.aspx?empid=<%# Eval("Employee_x0020_Id") %>'>  <asp:Label ID="lblEmployeeId" runat="server" Text='<%# Eval("Employee_x0020_Id") %>' />
+           </a>
             </td>
                
             <td>
-                 <asp:Label ID="lblName" runat="server" Text='<%# Eval
-("Name") %>' />
-
+                <a href='/HR/sitepages/Employee%20Card.aspx?empid=<%# Eval("Employee_x0020_Id") %>'>  <asp:Label ID="lblName" runat="server" Text='<%# Eval("Name") %>' /> </a>
             </td>
       </tr>
       
