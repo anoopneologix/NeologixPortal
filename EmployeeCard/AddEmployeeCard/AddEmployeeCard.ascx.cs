@@ -378,9 +378,8 @@ namespace EmployeeCard.AddEmployeeCard
             dtSource1.Rows.Add(dr);
 
 
-             gv_child.DataSource =  dtSource1;
-             
-             gv_child.DataBind();
+            gv_child.DataSource =  dtSource1;
+            gv_child.DataBind();
 
             clear();
         
@@ -972,6 +971,9 @@ namespace EmployeeCard.AddEmployeeCard
             gv_strength.DataBind();
 
             clearstren();
+
+
+
         }
 
         private void clearstren()
