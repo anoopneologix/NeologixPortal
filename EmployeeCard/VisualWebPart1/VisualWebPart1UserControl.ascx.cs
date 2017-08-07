@@ -80,8 +80,7 @@ namespace EmployeeCard.VisualWebPart1
                        }
                    }
                 }
-       
-            }
+           }
 
       
        protected void btn_Save_Click(object sender, EventArgs e)
@@ -137,7 +136,7 @@ namespace EmployeeCard.VisualWebPart1
             SaveNeoExp();
             SavePersonality();
 
-            lbl_alert.Text = "Saved Succefully";
+           
         }
 
        private void SavePersonality()
@@ -187,7 +186,7 @@ namespace EmployeeCard.VisualWebPart1
            SPListItemCollection critems = CRlist.Items;
            SPListItem item5 = CRlist.Items.Add();
            for (int i = 0; i < gv_careers.Rows.Count; i++)
-            {
+              {
                item5["Employee Id"] = txt_id.Text;
                GridViewRow row = gv_careers.Rows[i];
                item5["Designation"] = row.Cells[1].Text;
@@ -203,8 +202,8 @@ namespace EmployeeCard.VisualWebPart1
                item5["Technical Skill"] = row.Cells[5].Text;
                item5["Final salary"] = row.Cells[6].Text;
 
-             }
-           item5.Update();
+              }
+              item5.Update();
        }
 
        private void SaveCertifications()
@@ -310,7 +309,6 @@ namespace EmployeeCard.VisualWebPart1
         protected void btn_add_Click(object sender, EventArgs e)
         {
             SPWeb web = SPContext.Current.Web;
-          
             DataTable dt = new DataTable();
             dt.Columns.Add("ID");
             dt.Columns.Add("Child Name");
@@ -1497,18 +1495,14 @@ namespace EmployeeCard.VisualWebPart1
 
         }
 
-      
+        protected void btncancel_Click(object sender, EventArgs e)
+        {
 
-       
-       
-      
+          Page.Response.Redirect("EmployeeList.aspx");
+          
+           
+          
+        }
 
-      
-
-      
-      
-
-       
-
-     }
+    }
 }

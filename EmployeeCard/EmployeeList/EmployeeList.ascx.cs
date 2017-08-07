@@ -1,9 +1,15 @@
 ﻿using Microsoft.SharePoint;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Web.UI;
 using System.Web.UI.WebControls.WebParts;
+using System.Linq;
+using System.Data;
+using System.Web.UI.WebControls;
+using System.Web;
+
 
 namespace EmployeeCard.EmployeeList
 {
@@ -34,7 +40,6 @@ namespace EmployeeCard.EmployeeList
                 BindReapter();
             }
 
-
         }
 
         private void BindReapter()
@@ -53,6 +58,13 @@ namespace EmployeeCard.EmployeeList
                     
                   }
               }
+         }
+
+     protected void btn_add_Click(object sender, EventArgs e)
+         {
+
+              Page.Response.Redirect("AddEmployeeCard.aspx");
+         
          }
      }
 }

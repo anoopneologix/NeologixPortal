@@ -6,6 +6,21 @@
 <%@ Import Namespace="Microsoft.SharePoint" %> 
 <%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EmployeeList.ascx.cs" Inherits="EmployeeCard.EmployeeList.EmployeeList" %>
+
+
+
+
+<div>
+
+    <a href='HR/SitePages/AddEmployeeCard.aspx?empid=<%# Eval("Employee_x0020_Id") %>'> 
+    <asp:Button ID="btn_add" runat="server" OnClick="btn_add_Click" Text="Add" />
+    </a>
+
+</div>
+<p>
+    <br />
+     
+</p>
 <asp:Repeater ID="rptEmployees" runat="server">
   <HeaderTemplate>
         <table <%--cellspacing="0" rules="all"--%> border="1">
@@ -30,11 +45,11 @@
             <td>
                 <a href='/HR/sitepages/Employee%20Card.aspx?empid=<%# Eval("Employee_x0020_Id") %>'>  <asp:Label ID="lblName" runat="server" Text='<%# Eval("Name") %>' /> </a>
             </td>
-      </tr>
-      
-    </ItemTemplate>
-    <FooterTemplate>
-        </table>
+       </tr>
+        
+        </ItemTemplate>
+       <FooterTemplate>
+      </table>
     </FooterTemplate>
  </asp:Repeater>
 

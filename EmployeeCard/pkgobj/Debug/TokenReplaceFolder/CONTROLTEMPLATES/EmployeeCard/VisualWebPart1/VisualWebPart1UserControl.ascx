@@ -492,15 +492,14 @@
    
     <br />
   <br />
-    <div>
-    <asp:Button ID="btn_Save" runat="server" OnClick="btn_Save_Click" Text="Save" />
-   
-    <br />
-  <asp:Label ID="lbl_alert" runat="server" Text="Alert"></asp:Label>
+      <div>
+          <a href='/HR/sitepages/EmployeeList.aspx?empid=<%# Eval("Employee_x0020_Id") %>'> 
+          <asp:Button ID="btncancel" runat="server" OnClick="btncancel_Click" Text="Cancel" />
+         </a>
         </div>
    <br />
     <br />
 </div>
-<p>
+ <p>
     &nbsp;
-</p>
+ </p>

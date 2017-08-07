@@ -66,7 +66,7 @@ namespace EmployeeCard.AddEmployeeCard
             SPListItemCollection newitems = PDlist.GetItems(PDquery);
             //  SPListItem items = PDlist.Items.Add();
             foreach (SPListItem item in newitems)
-            {
+             {
 
                 string id = item["Employee Id"].ToString();
 
@@ -74,14 +74,14 @@ namespace EmployeeCard.AddEmployeeCard
                  {
                   flag=1;
                  }
-            }
+             }
 
             if (flag == 1)
-             {
+              {
 
                lbl_alert.Text="The item already exist in the list";
               
-             }
+              }
             else
             {
                 SavePersonalDetails();
@@ -96,9 +96,7 @@ namespace EmployeeCard.AddEmployeeCard
 
                 ClearDetails();
             }
-
-
-       }
+        }
 
         private void ClearDetails()
         {
@@ -130,7 +128,8 @@ namespace EmployeeCard.AddEmployeeCard
             txt_spousedesignation.Text = "";
             txt_spouseorganisation.Text = "";
 
-
+            
+            
             gv_child.Columns.Clear();
             gv_education.Columns.Clear();
             gv_certifications.Columns.Clear();
@@ -181,8 +180,7 @@ namespace EmployeeCard.AddEmployeeCard
             item["Spouse Organisation"] = txt_spousedesignation.Text;
             item.Update();
 
-
-        }
+         }
 
 
       
@@ -898,9 +896,6 @@ namespace EmployeeCard.AddEmployeeCard
  
 
  
-   
-  
-
         protected void gv_strength_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             SPWeb web = SPContext.Current.Web;
